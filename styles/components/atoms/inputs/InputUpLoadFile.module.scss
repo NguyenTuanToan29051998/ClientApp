@@ -1,0 +1,22 @@
+.uploadFile {
+  margin: 1rem 0;
+
+  .labelUploadFile {
+    display: flex;
+    gap: 0.5rem;
+    border: 1px solid var(--black);
+    padding: 0.375rem 0.75rem;
+    width: 149px;
+    border-radius: 0.25rem;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .disabled {
+    opacity: 0.4;
+  }
+
+  .inputUploadFile {
+    visibility: hidden;
+  }
+}

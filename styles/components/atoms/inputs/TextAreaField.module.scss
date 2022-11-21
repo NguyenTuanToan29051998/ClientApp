@@ -1,0 +1,55 @@
+.textareaField {
+  font-weight: 500;
+  width: 100%;
+
+  textarea {
+    width: 100%;
+    border: 1px solid var(--gray-200);
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: .5rem;
+    background: var(--gray-100);
+    resize: none;
+
+    &:focus {
+      outline: 1px solid var(--quaternary);
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--dark-gray);
+    }
+  }
+
+  .error {
+    border: 1px solid #EB2127;
+  
+    &:focus {
+      outline: 1px solid #EB2127;
+    }
+  }
+
+  span {
+    color: var(--red);
+  }
+
+  .errorText {
+    margin: 0;
+    margin-top: .25rem;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: var(--red);
+  }
+
+  .lenght {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--gray-400);
+    margin: 0;
+  }
+}

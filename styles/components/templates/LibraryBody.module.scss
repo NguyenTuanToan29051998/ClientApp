@@ -1,0 +1,310 @@
+.allPolicy {
+  display: flex;
+  gap: 1.25rem;
+
+  .policy {
+    border: 1px solid var(--gray-400);
+    background: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Inter";
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem 0.75rem;
+  }
+
+  .isSelected {
+    background-color: var(--tertiary);
+    color: white;
+  }
+}
+
+.categoryName {
+  font-size: 2.5rem;
+  margin-bottom: 1.625rem;
+}
+
+.book {
+  margin-top: 2.875rem;
+
+  .item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 55px;
+
+    .image {
+      width: 150px;
+      height: 180px;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 2rem;
+    }
+
+    .author {
+      margin-top: 0.75rem;
+      font-size: 1.25rem;
+      color: #565C65;
+    }
+
+    .media {
+      display: flex;
+      gap: 2.625rem;
+      margin-top: 0.625rem;
+      align-items: flex-end;
+    }
+
+    .columeIcon {
+      cursor: pointer;
+    }
+
+    .downloadIcon {
+      cursor: pointer;
+    }
+
+    .download {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.itemWrapper {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.video {
+  margin-top: 3.75rem;
+
+  .imageVideo {
+    cursor: pointer;
+    height: 320px;
+    width: 100%;
+  }
+
+  .titleVideo {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    height: 80px;
+  }
+
+  .playVideo {
+    position: absolute;
+    right: 45%;
+    top: 42%;
+    cursor: pointer;
+  }
+
+  .backgroundGray {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    z-index: 10;
+  }
+
+  .dialogCustom {
+    position: fixed;
+    width: 50%;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .close {
+      float: right;
+      margin-bottom: 17px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      margin-right: -25px;
+      cursor: pointer;
+    }
+
+    .dialogVideo {
+      width: 100%;
+      height: 600px;
+    }
+  }
+}
+
+.document {
+  margin-top: 4.125rem;
+
+  .pointer {
+    cursor: pointer;
+
+    .download {
+      width: 75px;
+    }
+  }
+
+  .docName {
+    color: #1890FF;
+    cursor: pointer;
+  }
+
+  .underlineWord {
+    border-bottom: 1px solid #1890FF;
+    margin-top: -3px;
+  }
+}
+
+.distanceFooter {
+  margin-bottom: 8.75rem;
+}
+
+@media (max-width: 1400px) {
+
+  .video {
+    margin-top: 3.75rem;
+
+    .imageVideo {
+      cursor: pointer;
+      height: 500px;
+      width: 100%;
+    }
+
+    .playVideo {
+      position: absolute;
+      right: 48%;
+      top: 41%;
+      cursor: pointer;
+    }
+
+    .dialogCustom {
+      width: 80%;
+      z-index: 11;
+      margin: 0 auto;
+
+      .dialogVideo {
+        width: 100%;
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .allPolicy {
+    display: block;
+    gap: 1.25rem;
+    padding: 0;
+
+    .policy {
+      margin-top: 2rem;
+    }
+
+    .isSelected {
+      background-color: var(--tertiary);
+      color: white;
+    }
+  }
+
+  .book {
+
+    .title {
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+
+    .author {
+      font-size: 1.125rem;
+      color: #565C65;
+    }
+
+    .media {
+      display: flex;
+      gap: .75rem !important;
+      margin-top: 0.625rem;
+
+      .listen {
+        font-size: 0.875rem !important;
+      }
+    }
+  }
+
+  .video {
+    margin-top: 3.75rem;
+
+    .imageVideo {
+      cursor: pointer;
+      height: 220px;
+      width: 100%;
+    }
+
+    .playVideo {
+      position: absolute;
+      right: 40%;
+      top: 39%;
+      cursor: pointer;
+    }
+
+    .dialogCustom {
+      width: 100%;
+      z-index: 11;
+      padding: 0 2.5rem;
+
+      .dialogVideo {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+
+  .distanceFooter {
+    margin-bottom: 3.125rem !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .book {
+    .item {
+      gap: 1.25rem;
+
+      .image {
+        width: 130px !important;
+      }
+    }
+  }
+
+  .video {
+    margin-top: 0;
+
+    .dialogCustom {
+      width: 100%;
+      z-index: 11;
+      padding: 0 0.625rem;
+
+      .close {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .dialogVideo {
+        width: 100%;
+        height: 300px;
+      }
+    }
+  }
+
+  .document {
+    margin-top: 1rem;
+  }
+}

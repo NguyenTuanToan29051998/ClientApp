@@ -1,0 +1,254 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+
+  .navbar {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1.5rem;
+
+    .dropdownMenu {
+      position: relative;
+      display: inline-block;
+      padding: 10.5px 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--tertiary);
+      }
+
+      a {
+        color: var(--dark);
+        text-decoration: none;
+      }
+
+      .selected {
+        color: var(--quinary);
+      }
+
+      .selectMenu {
+        background: white;
+        box-shadow: 0.125rem 0.25rem 0.25rem rgb(0 0 0 / 25%);
+        border-radius: 0 0 0.5rem 0.5rem;
+        position: absolute;
+        width: max-content;
+        padding: 0 3rem 0 0.875rem;
+        z-index: 1000;
+        color: var(--Gray-20);
+
+        .subMenu {
+          flex: 1 1 auto !important;
+
+          &:hover {
+            color: var(--tertiary);
+          }
+        }
+      }
+
+      .angleDownUpIcon {
+        display: none;
+      }
+    }
+
+    .closeIcon {
+      display: none !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .barsIcon {
+      display: none;
+    }
+  }
+
+  .language {
+    display: none;
+  }
+
+  .search {
+    position: relative;
+    margin-right: 98px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    .inpSearch {
+      border-bottom: 1px solid var(--gray-400) !important;
+      border: none;
+      width: 390px;
+      padding: 9px 40px 9px 0;
+      outline: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .searchIcon {
+      position: absolute;
+      right: 0;
+      top: 9px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    // display: block;
+    // gap: 212px;
+
+    .search {
+      width: 300px;
+
+      .inpSearch {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .wrapper {
+    .search {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .wrapper {
+    .navbar {
+      position: fixed;
+      right: -100%;
+      justify-content: start !important;
+      align-items: flex-start;
+      flex-direction: column;
+      top: 0;
+      padding: 45px 2rem;
+      height: 100%;
+      width: 70%;
+      background: #FFFFFF;
+      z-index: 10;
+      transition: 0.3s;
+
+      .dropdownMenu {
+        padding: 0.625rem;
+        display: inline-block;
+        font-size: 1.375rem;
+        position: relative;
+        // border-bottom: 1px solid var(--mercury);
+
+        .selectMenu {
+          color: #333333;
+          position: unset;
+          box-shadow: none;
+          background: var(--white-smoke);
+          border-radius: unset;
+          font-size: 1rem;
+          margin-left: 5%;
+          width: 80%;
+        }
+
+        .angleDownUpIcon {
+          position: absolute;
+          right: 7%;
+          top: 0.75rem;
+          display: inline-block;
+        }
+
+        .titleMenu {
+          width: 80%;
+        }
+
+        .selectMenu {
+          width: 93%;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .display {
+      right: 0;
+      transition: .5s;
+    }
+
+    .language {
+      display: block;
+      margin-top: 1rem;
+      border-top: 1px solid var(--gray-400);
+
+      p {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        color: var(--dark);
+        font-size: 1.375rem;
+        padding: 0.625rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .flagArea {
+        margin-top: 0.125rem;
+        &Content {
+          border: 1px solid var(--gray-400);
+          padding: 10.5px;
+          border-radius: 0.5rem;
+          .lang {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            min-width: 8.5rem;
+            cursor: pointer;
+
+            .image {
+              border-radius: 50%;
+            }
+
+            .checked {
+              svg {
+                width: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .search {
+      position: relative;
+      width: 390px;
+      margin-right: 1rem;
+
+      .inpSearch {
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+
+      .searchIcon {
+        position: absolute;
+        right: 0;
+        top: 9px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    display: block;
+
+    .search {
+      width: 100% !important;
+      padding: 0 1rem;
+      margin-right: 0;
+
+      .searchIcon {
+        right: 4%;
+      }
+    }
+  }
+}

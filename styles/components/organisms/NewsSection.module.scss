@@ -1,0 +1,51 @@
+.wrapper {
+  background: transparent;
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .card {
+      width: calc((100% - 6rem) / 4);
+      cursor: pointer;
+    }
+  }
+
+  .buttonArea {
+    width: auto;
+    max-width: 280px;
+    margin-top: 3rem !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    .cards {
+      .card {
+        width: calc(50% - 1rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .wrapper {
+    .cards {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper {
+    .cards {
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}

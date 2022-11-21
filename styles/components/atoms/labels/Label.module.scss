@@ -1,0 +1,42 @@
+.label {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+
+  h1 {
+    font-weight: 700;
+    line-height: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .buttonArea {
+    width: auto;
+    max-width: 148px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .label {
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .label {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 525px) {
+  .label {
+    h1 {
+      font-size: 1.5rem !important;
+    }
+  }
+}

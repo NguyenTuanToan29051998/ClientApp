@@ -1,0 +1,23 @@
+.primarybutton {
+  background: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 1.3rem;
+  line-height: 19px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.large {
+  padding: 2rem 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .large {
+    padding: 1rem 1.5rem;
+  }
+}

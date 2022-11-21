@@ -1,0 +1,217 @@
+.wrap {
+  margin-top: 3.5rem;
+
+  .imgWrapper {
+    display: flex;
+
+    .wrapIntro {
+
+      .introduce {
+        font-size: 1.875rem;
+        font-weight: 800;
+        text-align: start;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .typeUser {
+    margin-top: 4.25rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #1D1929;
+    font-weight: 500;
+
+    .text {
+      color: var(--quinary);
+      font-weight: 700;
+    }
+  }
+
+  .contentClassify {
+    display: flex;
+    margin-top: 1.5rem;
+
+    .box {
+      position: relative;
+      height: 390px;
+      width: 33%;
+      background-size: 123%;
+      position: relative;
+      background-position: -4.5rem center;
+      filter: grayscale(100%);
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        width: 50%;
+        background-size: 100%;
+        background-position: center center;
+        filter: none;
+
+        .numericalOrder {
+          margin-top: 2.25rem;
+          display: grid;
+          width: 2rem;
+          height: 5.875rem;
+          align-content: center;
+          top: 0px;
+          font-size: 3.375rem;
+          font-weight: 800;
+          color: white;
+        }
+
+        .title {
+          padding-left: 10%;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .classifyEnterprise {
+      background-image: url('/assets/SIB-shining-bg.jpg');
+
+      &:hover .numericalOrder {
+        background-color: var(--conifer);
+      }
+    }
+
+    .classifyUnit {
+      background-image: url('/assets/Intermediaries.jpg');
+
+      &:hover .numericalOrder {
+        background-color: var(--flamenco);
+      }
+    }
+
+    .classifyOrgan {
+      background-image: url('/assets/policy-maker.jpg');
+
+      &:hover .numericalOrder {
+        background-color: var(--tertiary);
+      }
+    }
+
+    .numericalOrder {
+      top: 2.25rem;
+      height: 5.625rem;
+      width: 0.625rem;
+      background-color: white;
+      position: absolute;
+      font-size: 0px;
+      text-align: center;
+    }
+
+    .title {
+      padding: 1rem 1rem 1rem 2rem;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      position: absolute;
+      top: 14%;
+      font-size: 1.5rem;
+      text-align: start;
+    }
+
+    .classifyEnterprise:hover,
+    .classifyUnit,
+    .classifyOrgan {
+      background-size: cover;
+    }
+
+    .classifyEnterprise,
+    .classifyUnit:hover,
+    .classifyOrgan {
+      background-size: cover;
+    }
+
+    .classify,
+    .classifyUnit,
+    .classifyOrgan:hover {
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    .imgWrapper {
+      display: block;
+
+      .wrapIntro {
+        margin-top: 2rem;
+        .introduce {
+          text-align: center;
+        }
+      }
+    }
+
+    .typeUser {
+      margin-top: 3rem !important;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #1D1929;
+      font-weight: 500;
+    }
+
+    .contentClassify {
+      display: block;
+
+      .classifyEnterprise,
+      .classifyUnit,
+      .classifyOrgan {
+        height: 550px;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        background-size: 123% !important;
+
+        &:hover {
+          height: 550px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .wrap {
+    .typeUser {
+      margin-top: 4.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #1D1929;
+      font-weight: 500;
+    }
+
+    .contentClassify {
+      display: block;
+
+      .classifyEnterprise,
+      .classifyUnit,
+      .classifyOrgan {
+        height: 360px;
+      }
+
+      .box {
+      background-size: cover !important;
+      filter: none !important;
+      cursor: pointer;
+        &:hover{
+          // pointer-events: none;
+          height: 360px;
+          background-position: center center;
+
+          .numericalOrder {
+            height: 5.625rem;
+            width: 0.625rem;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}

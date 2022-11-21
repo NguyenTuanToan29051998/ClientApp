@@ -1,0 +1,33 @@
+.btnScroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  .newsCategory {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0;
+  
+    .news {
+      border: 1px solid var(--gray-400);
+      background: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: "Inter";
+      line-height: 19px;
+      text-align: center;
+      cursor: pointer;
+      padding: 7.5px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .isSelected {
+      background-color: var(--tertiary);
+      color: white;
+    }
+  }
+}
+
+.btnScroll::-webkit-scrollbar {
+  display: none;
+}

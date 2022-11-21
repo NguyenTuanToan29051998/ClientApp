@@ -1,0 +1,39 @@
+.customModal {
+  max-width: 580px;
+
+  .wrapper {
+    position: relative;
+    padding: 3rem 5rem;
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      font-weight: 400;
+      font-size: .875rem;
+      line-height: 1.5rem;
+      color: #000000;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 28px;
+      line-height: 40px;
+      color: var(--black);
+      margin-bottom: 2rem;
+    }
+  }
+
+  .sibModal {
+    justify-content: center;
+    max-width: 630px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .customModal {
+    .wrapper {
+      padding: 2.5rem;
+    }
+  }
+}

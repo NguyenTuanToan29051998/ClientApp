@@ -1,0 +1,96 @@
+.body {
+  padding: 20px 200px;
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--black);
+  }
+
+  .date {
+
+    margin: 0.625rem 0;
+    font-size: 0.75rem;
+    color: var(--dark);
+  }
+
+  .content {
+    margin-top: 2rem;
+    color: var(--Gray-20);
+  }
+
+  .btnRegisterEvent {
+    margin-top: 35px;
+    margin-bottom: 3.75rem;
+    border: none;
+    background: var(--quinary);
+    padding: 1rem 1.375rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .modalContent {
+    padding: 1.25rem 1.875rem;
+  }
+}
+
+.close {
+  margin: 15px 30px;
+  cursor: pointer;
+}
+
+.btnRegister {
+  margin: 2rem 0;
+}
+
+.formRegister {
+  padding: 0 100px;
+  padding-bottom: 1.875rem;
+
+  .title {
+    font-size: 1.75rem;
+    color: var(--black);
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .inpWrap {
+    margin-top: 2rem;
+  }
+
+}
+
+.formConfirm {
+  padding: 0 50px;
+  padding-bottom: 1.875rem;
+
+  .title {
+    font-size: 1.85rem;
+    color: var(--black);
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1300px) {
+  .body {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .body {
+    padding: 1.25rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .body {
+    padding: 1.25rem 0.625rem;
+  }
+
+  .formRegister {
+    padding: 0 25px;
+
+  }
+}
+

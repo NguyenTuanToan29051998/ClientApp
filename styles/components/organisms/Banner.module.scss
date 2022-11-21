@@ -1,0 +1,166 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    z-index: 10;
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .iconLeft {
+    left: 1rem;
+  }
+
+  .iconRight {
+    right: 1rem;
+  }
+
+  .slideShow {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 150px);
+
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 150px);
+      background-size: cover;
+      background-position: top;
+
+      &Mark {
+        position: absolute;
+        top: 55%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        width: 40vw;
+        min-width: 600px;
+        max-width: 700px;
+        background: rgba(2, 2, 2, .4);
+        border-radius: 8px;
+        padding: 3rem 4.5rem;
+        backdrop-filter: blur(2px);
+        transition: .3s;
+
+        .bntArea {
+          margin-top: 2rem;
+          width: auto;
+          max-width: 294px;
+        }
+      }
+
+      &Title {
+        color: #fff;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #fff;
+        line-height: 1.5rem;
+
+        a {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .Banner {
+          &Mark {
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            background: rgba(2, 2, 2, 0.4);
+          }
+        }
+      }
+    }
+  }
+
+  .dotArea {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 100vw;
+    margin: 0;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: #4f4f4f;
+      border-radius: 100%;
+      border: none;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .selected {
+      background-color: #FFFFFF;
+    }
+  }
+}
+
+.show {
+  animation: show 1.5s ease both;
+}
+
+.hide {
+  animation: hide 1.5s ease both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .banner {
+    &Mark {
+      padding: 3rem 2rem;
+      left: 50% !important;
+      width: 90%;
+      max-width: unset;
+      min-width: unset;
+    }
+
+    &Title {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+}

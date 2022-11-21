@@ -1,0 +1,478 @@
+{
+  "lang": "Tiếng Việt",
+  "Vietnamese": "Tiếng Việt",
+  "English": "Tiếng Anh",
+  "SIB": "Doanh nghiệp tạo tác động xã hội",
+  "intermediaries": "Đơn vị hỗ trợ",
+  "policyMaker": "Cơ quan quản lý nhà nước",
+  "chat": "Nói chuyện với chúng tôi",
+  "back": "QUAY LẠI",
+  "send": "Gửi",
+  "continue": "Tiếp tục",
+  "complete": "Hoàn thành",
+  "close": "Đóng",
+  "connectionService": "Dịch vụ kết nối",
+  "connectExperts": "Kết nối chuyên gia",
+  "share": "Chia sẻ",
+  "homePage": "Trang chủ",
+  "signupSupport": "Đăng ký nhận hỗ trợ",
+  "signupSupportISEECOVID": "Đăng ký nhận hỗ trợ từ dự án ISEECOVD",
+  "post": "Đăng bài",
+  "address": "Địa chỉ",
+  "profession": "Ngành nghề",
+  "book": "Sách",
+  "listen": "Nghe",
+  "download": "Tải xuống",
+  "documents": "Tài liệu",
+  "register": "Đăng ký",
+  "connect": "KẾT NỐI",
+  "search": "Tìm kiếm",
+  "required": "bắt buộc",
+  "cancel": "Huỷ bỏ",
+  "percentInvalid": "Vui lòng chỉ nhập số từ 0 đến 100 và %",
+  "dateInvalid": "Vui lòng không chọn ngày trong quá khứ",
+  "member": "Thành viên",
+  "projectISEECOVID": "Dự án ISEECOVD",
+  "time": "Thời gian",
+  "location": "Địa điểm",
+  "informationEvents": "Thông tin sự kiện",
+  "readMore": "Đọc thêm",
+  "backToTop": "Trở về đầu trang",
+  "language": "Ngôn ngữ",
+  "noRelatedPost": "Chưa có bài viết liên quan",
+  "seeMoreStories": "Xem thêm câu chuyện",
+  "supportInformation": "Thông tin hỗ trợ",
+  "registerEvent": "Đăng ký tham gia sự kiện",
+  "noPost": "Chưa có bài viết",
+  "noVideo": "Chưa có video",
+  "noDocs": "Chưa có tài liệu",
+  "sendRequest": "Yêu cầu đã được tiếp nhận",
+  "supportPackageEmpty": "Hiện tại không có gói hỗ trợ nào đang mở",
+  "master": {
+    "title_1": "Hỗ trợ hệ sinh thái",
+    "title_2": "các doanh nghiệp tạo tác động xã hội",
+    "title_3": "tại việt nam ứng phó với covid-19",
+    "youAre": "Bạn là",
+    "who": "AI",
+    "desc": "Vui lòng lựa chọn để có thể xem nội dung phù hợp với bạn"
+  },
+  "home": {
+    "banner": {
+      "title": "Hỗ trợ Hệ sinh thái các doanh nghiệp tạo tác động xã hội tại Việt Nam ứng phó với COVID-19",
+      "desc": "Tăng cường khả năng phục hồi của các doanh nghiệp có tác động xã hội (SIB) tại Việt Nam và góp phần giảm tác động của COVID-19 đối với các nhóm dễ bị tổn thương, đặc biệt là phụ nữ và trẻ em...",
+      "moreInformation": "Tìm hiểu thêm",
+      "register": "ĐĂNG KÝ THAM GIA NGAY"
+    },
+    "supportInformation": "THÔNG TIN HỖ TRỢ",
+    "supportProgram": "Chương trình hỗ trợ",
+    "projectAdvisor": "CỐ VẤN CỦA DỰ ÁN",
+    "SIBsupportCenter": "TRUNG TÂM HỖ TRỢ SIB",
+    "story": "Câu chuyện thành công",
+    "news": "TIN TỨC",
+    "event": "SỰ KIỆN",
+    "seeMoreNews": "Xem thêm tin tức",
+    "seeMoreEvent": "Xem thêm sự kiện",
+    "seeMoreAdvisor": "Xem thêm cố vấn",
+    "scheduleAdvisor": "ĐẶT LỊCH HẸN VỚI CỐ VẤN",
+    "register": "ĐĂNG KÝ",
+    "connectRequest": "YÊU CẦU KẾT NỐI",
+    "time": "Thời gian diễn ra",
+    "quote": "Để không ai bị bỏ lại phía sau",
+    "SIB": {
+      "SIBsupportCenterValues": [
+        {
+          "name": "SIB HUB",
+          "image": "/assets/DSC00610.jpg",
+          "type": 1,
+          "href": "/sibhubs"
+        },
+        {
+          "name": "Dịch vụ kết nối",
+          "image": "/assets/banner.jpg",
+          "type": 2,
+          "href": "/sibhubs/SIB&SIBConnection"
+        },
+        {
+          "name": "Dịch vụ đánh giá sức khoẻ doanh nghiệp",
+          "image": "/assets/DSC00686.jpg",
+          "type": 3,
+          "href": "/"
+        }
+      ]
+    },
+    "SIBIntermediaries": {
+      "supportPrograms": [
+        {
+          "name": "Cho đơn vị đã hỗ trợ SIB",
+          "image": "/assets/avtBanner.png",
+          "href": "/sibIntermediaries/programSupport",
+          "type": 4
+        },
+        {
+          "name": "Cho đơn vị đang xây dựng chương trình",
+          "image": "/assets/avtBanner2.png",
+          "href": "/sibIntermediaries/programSupport",
+          "type": 5
+        }
+      ]
+    },
+    "infomationSection": {
+      "SIBValues": [
+        {
+          "title": "Gói hỗ trợ SIB",
+          "icon": "informationIcon1",
+          "href": "/support/sibSupportPackage"
+        },
+        {
+          "title": "Đào tạo và huấn luyện tổng quát",
+          "icon": "informationIcon2",
+          "href": "/support/generalTraining&Coaching"
+        },
+        {
+          "title": "Kết nối doanh nghiệp",
+          "icon": "informationIcon3",
+          "href": "/support/enterpriseConnection"
+        },
+        {
+          "title": "Mở rộng thị trường",
+          "icon": "informationIcon4",
+          "href": "/support/marketExpansion"
+        }
+      ],
+      "policyMakerValues": [
+        {
+          "title": "Nâng cao năng lực",
+          "icon": "informationIcon5",
+          "href": "/policyMaker/support/capacityBuilding"
+        },
+        {
+          "title": "Xây dựng chính sách",
+          "icon": "informationIcon6",
+          "href": "/policyMaker/support/policyDevelopment"
+        },
+        {
+          "title": "Thí điểm chính sách",
+          "icon": "informationIcon7",
+          "href": "/policyMaker/support/policyPilot"
+        }
+      ]
+    },
+    "registerMember": {
+      "programs": {
+        "title": "Đăng ký làm thành viên của SIB Hub",
+        "subTitles": [
+          "Kết nối mạng lưới 200 thành viên",
+          "Được hỗ trợ  từ SIB Hub và các lợi ích thành viên khác",
+          "Nhận thông tin mới nhất và đầy đủ nhất",
+          "Sử dụng dữ liệu"
+        ],
+        "href": "/sibhubs/register",
+        "image": "/assets/register-member-background.jpg"
+      },
+      "registerForSupport": {
+        "title": "Đăng ký nhận hỗ trợ từ dự án ISEECOVID",
+        "subTitles": [
+          "Kết nối mạng lưới 200 thành viên",
+          "Được hỗ trợ  từ SIB Hub và các lợi ích thành viên khác",
+          "Nhận thông tin mới nhất và đầy đủ nhất",
+          "Sử dụng dữ liệu"
+        ],
+        "href": "/register/getSupports",
+        "image": "/assets/register-member-background.jpg"
+      }
+    }
+  },
+  "footer": {
+    "register": "Đăng ký nhận thông tin mới nhất từ chương trình",
+    "supportInformation": "THÔNG TIN HỖ TRỢ",
+    "email": "Vui lòng điền email của bạn",
+    "required": "bắt buộc",
+    "send": "GỬI",
+    "errorText": "Định dạng email không đúng",
+    "number": "máy lẻ"
+  },
+  "about": [
+    {
+      "id": 0,
+      "content": "Mục tiêu dự án",
+      "ariaLabel": "Project objectives"
+    },
+    {
+      "id": 1,
+      "content": "Phương pháp tiếp cận",
+      "ariaLabel": "Approach"
+    },
+    {
+      "id": 2,
+      "content": "Cố vấn dự án",
+      "ariaLabel": "Project advisor"
+    }
+  ],
+  "sibModal": {
+    "connection": {
+      "title": "Bạn cần trở thành thành viên của SIB Hub để đăng bài viết",
+      "verifyRequest": "Chúng tôi đã nhận được yêu cầu đăng bài của bạn. Chúng tôi sẽ liên hệ với bạn trong thời gian 03-07 ngày làm việc."
+    },
+    "advisor": {
+      "title": "Bạn cần trở thành thành viên của SIB Hub để kết nối với",
+      "verifyRequestStart": "Chúng tôi đã nhận được yêu cầu kết nối với",
+      "verifyRequestEnd": "của bạn. Chúng tôi sẽ liên hệ với bạn trong thời gian 03-07 ngày làm việc."
+    },
+    "sibhub": {
+      "title": "Bạn cần trở thành thành viên của SIB Hub để sử dụng dịch vụ đánh giá sức khoẻ doanh nghiệp",
+      "verifyRequest": "Chúng tôi đã nhận được yêu cầu sử dụng dịch vụ đánh giá sức khoẻ doanh nghiệp của bạn. Chúng tôi sẽ liên hệ với bạn trong thời gian 03-07 ngày làm việc."
+    },
+    "download": {
+      "title": "Bạn cần trở thành thành viên của SIB Hub để download tài liệu này",
+      "verifyRequest": "Chúng tôi đã nhận được yêu cầu cung cấp tài liệu của bạn. Chúng tôi sẽ gửi tài liệu này trong vòng xx ngày làm việc. Vui lòng kiểm tra email để nhận tài liệu."
+    },
+    "question": "Bạn đã là thành viên của SIB Hub chưa?",
+    "isMember": "Rồi, tôi đã là thành viên của SIB Hub",
+    "notMember": "Chưa, tôi chưa là thành viên của SIB Hub",
+    "register": "ĐĂNG KÝ LÀM THÀNH VIÊN SIB HUB",
+    "companyName": "Tên doanh nghiệp",
+    "placeholderCompanyName": "Vui lòng điền tên doanh nghiệp của bạn",
+    "emailAddress": "Địa chỉ email (bắt buộc)",
+    "placeholderEmailAddress": "Vui lòng điền địa chỉ email đăng ký thành viên"
+  },
+  "registerSIBHub": {
+    "returnToHome": "QUAY LẠI TRANG CHỦ",
+    "demandSurvey": "Khảo sát nhu cầu của SIB",
+    "completeTitle": "Đăng ký thành viên SIB HUB",
+    "completeSubTitle": "Bạn đã gửi đơn đăng ký thành công!",
+    "completeDesc": "\\n    Chúng tôi đã nhận được đơn đăng ký thành viên của SIB Hub của bạn.\\n    Chúng tôi sẽ gửi kết quả tới bạn trong vòng 30 ngày làm việc.\\n    Trân trọng,",
+    "ortherBusinessTypeInvalid": "Vui lòng chọn loại hình kinh doanh của doanh nghiệp"
+  },
+  "feedback": {
+    "feedback": "Góp ý",
+    "title": "Gửi góp ý các chính sách có liên quan",
+    "fullname": "Họ và tên",
+    "fullnameRequired": "Vui lòng điền họ tên",
+    "email": "Địa chỉ email (bắt buộc)",
+    "feedbackText": "Góp ý (bắt buộc)",
+    "feedbackRequired": "Nội dung góp ý",
+    "file": "Các tài liệu khác",
+    "addFile": "Thêm tài liệu",
+    "example": "Ví dụ: thongtin@abc.com",
+    "sendSuccess": "Bạn đã gửi góp ý thành công!"
+  },
+  "sib": {
+    "supportTabs": [
+      {
+        "id": 0,
+        "name": "Gói hỗ trợ SIB",
+        "path": "/support/sibSupportPackage"
+      },
+      {
+        "id": 1,
+        "name": "Đào tạo & huấn luyện tổng quát",
+        "path": "/support/generalTraining&Coaching"
+      },
+      {
+        "id": 2,
+        "name": "Kết nối doanh nghiệp",
+        "path": "/support/enterpriseConnection"
+      },
+      {
+        "id": 3,
+        "name": "Mở rộng thị trường",
+        "path": "/support/marketExpansion"
+      }
+    ],
+    "supportHashtagTabs": [
+      {
+        "id": 0,
+        "name": "Gói hỗ trợ SIB",
+        "path": "/support/hashtag?tabId=0"
+      },
+      {
+        "id": 1,
+        "name": "Đào tạo & huấn luyện tổng quát",
+        "path": "/support/hashtag?tabId=1"
+      },
+      {
+        "id": 2,
+        "name": "Kết nối doanh nghiệp",
+        "path": "/support/hashtag?tabId=2"
+      },
+      {
+        "id": 3,
+        "name": "Mở rộng thị trường",
+        "path": "/support/hashtag?tabId=3"
+      }
+    ]
+  },
+  "policy": {
+    "title": "Chính sách hiện hành",
+    "feedback": "GÓP Ý VỀ CHÍNH SÁCH",
+    "btn": "Xem thêm chính sách",
+    "question": "Câu hỏi thường gặp",
+    "form": "Thu thập nhu cầu của SIB và đơn vị trung gian",
+    "supportTabs": [
+      {
+        "id": 0,
+        "name": "Nâng cao năng lực",
+        "path": "/policyMaker/support/capacityBuilding"
+      },
+      {
+        "id": 1,
+        "name": "Xây dựng chính sách",
+        "path": "/policyMaker/support/policyDevelopment"
+      },
+      {
+        "id": 2,
+        "name": "Thí điểm chính sách",
+        "path": "/policyMaker/support/policyPilot"
+      }
+    ],
+    "supportHashtagTabs": [
+      {
+        "id": 0,
+        "name": "Nâng cao năng lực",
+        "path": "/policyMaker/support/hashtag?tabId=0"
+      },
+      {
+        "id": 1,
+        "name": "Xây dựng chính sách",
+        "path": "/policyMaker/support/hashtag?tabId=1"
+      },
+      {
+        "id": 2,
+        "name": "Thí điểm chính sách",
+        "path": "/policyMaker/support/hashtag?tabId=2"
+      }
+    ]
+  },
+  "requiredTextError": "Vui lòng điền thông tin vào ô trống",
+  "emailTextError": "Định dạng email không đúng",
+  "nameMaxLength": "Không được vượt quá 50 ký tự",
+  "errorFormatName": "Họ tên không đúng",
+  "phoneTextError": "Số điện thoại không đúng",
+  "requestSuccess": "Gửi yêu cầu thành công!",
+  "news": {
+    "sibSupportPackage": "Gói hỗ trợ SIB",
+    "trainingAndCoaching": "Đào tạo & huấn luyện tổng quát",
+    "connectBussiness": "Kết nối doanh nghiệp",
+    "marketExpansion": "Mở rộng thị trường",
+    "relatedPosts": "Bài viết liên quan",
+    "register": "Đăng ký tham gia"
+  },
+  "collectNeeds": {
+    "currentPolicy": "Chính sách hiện hành",
+    "titleCollectNeeds": "Thu thập nhu cầu của SIB và các đơn vị trung gian",
+    "note": "Bằng cách điền vào bảng này bạn có thể đưa ra những nguyện vọng của đơn vị mình, chúng tôi sẽ tiếp nhận và đưa ra giải pháp phù hợp nhất cho tổ chức của bạn nhằm tháo gỡ những khó khăn mà doanh nghiệp đang gặp phải",
+    "unitName": "Tên đơn vị (bắt buộc)",
+    "emailAddress": "Địa chỉ email (bắt buộc)",
+    "needsOfUnit": "Nhu cầu của đơn vị (bắt buộc)",
+    "otherDocs": "Các tài liệu khác",
+    "moreDocs": "Thêm tài liệu",
+    "send": "Gửi",
+    "placeholderUnitName": "Vui lòng điền tên đơn vị",
+    "placeholderEmailAddress": "Ví dụ: thongtin@abc.com",
+    "placeholderNeedsOfUnit": "Nội dung góp ý",
+    "submitRequest": "Bạn đã gửi yêu cầu thành công!",
+    "requestContent": "Chúng tôi đã nhận được bảng thu thập nhu cầu của bạn. Chúng tôi sẽ gửi kết quả tới bạn trong vòng 30 ngày làm việc. \\n    Trân trọng,",
+    "errorFileFormat": "Định dạng tài liệu không đúng",
+    "errorFileSize": "Vui lòng chọn kích thước tệp nhỏ hơn 10MB"
+  },
+  "getSupport": {
+    "title": "Đăng ký nhận hỗ trợ từ DỰ ÁN ISEECOVID",
+    "subTitle": "Các gói hỗ trợ đang mở đăng ký",
+    "desc": "Giới thiệu gói hỗ trợ"
+  },
+  "sibNeedHelp": "SIB CẦN GIÚP ĐỠ",
+  "sibCanHelp": "SIB CÓ THỂ GIÚP ĐỠ",
+  "contentNeedHelp": "Nội dung cần trợ giúp",
+  "contentCanHelp": "Nội dung có thể giúp đỡ",
+  "contactInfo": "Thông tin liên hệ",
+  "tabConnectSIBList": [
+    "Kết nối SIB&SIB",
+    "SIB và đơn vị hỗ trợ",
+    "Kết nối chuyên gia"
+  ],
+  "tabLibraryList": [
+    "Chính sách về bình đẳng giới",
+    "Chính sách hỗ trợ hiện hành",
+    "Tài liệu phân tích nhu cầu"
+  ],
+  "sibIntermediariesList": [
+    "Gói hỗ trợ SIB",
+    "Đào tạo & huấn luyện tổng quát",
+    "Kết nối doanh nghiệp",
+    "Mở rộng thị trường"
+  ],
+  "policyMakerList": [
+    "Nâng cao năng lực",
+    "Xây dựng chính sách",
+    "Thí điểm chính sách"
+  ],
+  "sibhubs": {
+    "title": "SIB HUB",
+    "introduce": "Giới thiệu về SIB HUB",
+    "advisor": "Cố vấn của dự án",
+    "appointmentInfo": "Điền thông tin đặt lịch hẹn",
+    "companyName": "Tên doanh nghiệp (bắt buộc)",
+    "placeholderCompanyName": "Vui lòng điền tên doanh nghiệp của bạn",
+    "emailAddress": "Email (bắt buộc)",
+    "placeholderEmailAddress": "Vui lòng điền email của bạn",
+    "phoneNumber": "Số điện thoại (bắt buộc)",
+    "placeholderPhoneNumber": "Vui lòng điền số điện thoại của bạn",
+    "consultationTime": "Thời gian mong muốn nhận tư vấn",
+    "chooseDate": "Chọn ngày",
+    "consultingContent": "Nội dung muốn được tư vấn",
+    "fillDescription": "Điền mô tả",
+    "completeRegisterTitle": "Bạn đã đăng ký đặt lịch hẹn thành công!",
+    "completeRegister": "Chúng tôi đã nhận được yêu cầu nhận tư vấn. Chúng tôi sẽ gửi lịch hẹn với cố vấn qua email của bạn.",
+    "backToHomePage": "Trở về trang chủ",
+    "SIBsupportCenter": "Trung tâm hỗ trợ SIB",
+    "companyInvalid": "Tên doanh nghiệp không đúng định dạng",
+    "memberVerificationTitle": "Bạn cần trở thành thành viên của SIB Hub để kết nối với dự án",
+    "fillInfo": "Điền thông tin tham gia sự kiện",
+    "regisSuccess": "Bạn đã đăng ký tham gia sự kiện thành công!",
+    "verifyRequest": "Chúng tôi đã nhận được đơn đăng ký tham gia sự kiện của bạn. Vui lòng kiểm tra email để nhận được thông tin về sự kiện sớm nhất.",
+    "tabValues": [
+      {
+        "id": 1,
+        "name": "Kết nối SIB&SIB",
+        "path": "/sibhubs/connects"
+      },
+      {
+        "id": 2,
+        "name": "SIB và đơn vị hỗ trợ",
+        "path": "/sibhubs/supports"
+      },
+      {
+        "id": 3,
+        "name": "Kết nối chuyên gia",
+        "path": "/sibhubs/experts"
+      }
+    ]
+  },
+  "registerToReceiveSupport": {
+    "title": "Đăng ký nhận hỗ trợ từ dự án",
+    "subTitle": [
+      "Thông tin cơ bản",
+      "Thành viên cốt lõi",
+      "Thách thức và giải pháp"
+    ],
+    "reset": "ĐIỀN LẠI TỪ ĐẦU",
+    "addMember": "Thêm thành viên khác",
+    "addMemberBtn": "Thêm thành viên",
+    "removeMemberBtn": "Xóa thành viên",
+    "completeSubTitle": "Bạn đã gửi đơn đăng ký thành công!",
+    "modal": {
+      "title": "Bạn có chắc chắn muốn huỷ đăng ký?",
+      "desc": "Bản đăng ký bị huỷ sẽ không được lưu lại. Bạn vẫn chắc chắn muốn huỷ bản đăng ký này?",
+      "btn": " Huỷ đăng ký"
+    }
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "follow": "Theo dõi chúng tôi"
+  },
+  "media": {
+    "news": "Tin tức",
+    "event": "Sự kiện",
+    "outstanding": "NỔI BẬT"
+  }
+}

@@ -1,0 +1,135 @@
+.about {
+  .boxButtons {
+    max-width: 1440px;
+    margin: auto;
+    position: sticky;
+    transition: .5s;
+    z-index: 9;
+    top: 54px;
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      padding: 1rem 0;
+      gap: 8px;
+    }
+  }
+
+  .distanceFooter {
+    margin-bottom: 4rem;
+  }
+
+  .labelFooter {
+    width: 49.875rem;
+    margin: 0 auto;
+  }
+
+  .boxButton {
+    position: fixed;
+    right: 0%;
+    bottom: 9.61%;
+    background: #1d1929;
+    width: 268px;
+    height: 297px;
+    border-radius: 10px 10px 0px 0px;
+
+    .Button {
+      width: 83%;
+      margin: 1.25rem auto 0;
+    }
+
+    .iconClose {
+      width: 1.25rem;
+      right: 0.625rem;
+      position: absolute;
+      background: transparent !important;
+      border: none !important;
+      display: none;
+    }
+
+    .imageButton {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .about {
+    .buttons {
+      padding: 0 6.25rem;
+    }
+
+    .labelFooter {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .boxButtons {
+      overflow-x: scroll;
+
+      .buttons {
+        padding: 0;
+        width: 550px;
+        margin: 0.75rem 1.25rem;
+      }
+    }
+
+    .boxScrollDown {
+      transform: translateY(-54%);
+      transition: 0.4s;
+
+      .iconClose {
+        display: block;
+        color: white;
+        top: -15px;
+        font-size: 35px;
+      }
+
+      .Button {
+        position: relative;
+
+        .imageButton {
+          display: block;
+        }
+
+        img {
+          display: block;
+        }
+      }
+    }
+
+    .boxScrollUp {
+      transform: translateY(0);
+      transition: 0.4s;
+      background: transparent;
+      height: 3.125rem;
+
+      .iconClose {
+        top: -3px;
+        display: block;
+        font-size: 1.25rem;
+        color: --gray-400 !important;
+      }
+
+      .Button {
+        position: relative;
+
+        .imageButton {
+          display: none;
+        }
+
+        img {
+          display: none;
+        }
+      }
+    }
+
+    .labelFooter {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.pagearea {
+  margin-top: 2.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+
+  .backToTop {
+    font-size: 1.875rem;
+    margin-bottom: 3px;
+    cursor: pointer;
+  }
+
+  .pageitems {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .paginationitem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #a8a8a8;
+      font-size: 1.125rem;
+      font-weight: 500;
+      width: 1.875rem;
+      height: 1.875rem;
+
+      &:hover {
+        color: black;
+        cursor: pointer;
+      }
+    }
+
+    .activepaginationitem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.875rem;
+      height: 1.875rem;
+      color: #fff;
+      font-size: 1.125rem;
+      background-color: black;
+      border-radius: 1000px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dotsWrap {
+    display: flex;
+    gap: 0.125rem;
+    align-items: flex-end;
+    height: 0.625rem;
+
+    .dots {
+      width: 3px;
+      height: 3px;
+      background: gray;
+      border-radius: 100%;
+    }
+  }
+}
+
+.paginationprevarrow {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-right: 0.125rem solid black;
+  border-top: 0.125rem solid black;
+  transform: rotate(-135deg);
+  cursor: pointer;
+}
+
+.paginationnextarrow {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-right: 0.125rem solid black;
+  border-top: 0.125rem solid black;
+  transform: rotate(45deg);
+  cursor: pointer;
+}

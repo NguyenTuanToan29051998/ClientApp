@@ -1,0 +1,89 @@
+.mediaCategory {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.25rem;
+
+  .news {
+    border: 1px solid var(--gray-400);
+    background: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Inter";
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    padding: 7.5px 12px;
+  }
+
+  .isSelected {
+    background-color: var(--tertiary);
+    color: white;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  .date {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
+  .title {
+    margin: 0.5rem 0;
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  .hashtag {
+    color: var(--quaternary);
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .content {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+.distanceFooter {
+  margin-bottom: 160px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .buttons {
+    padding: 0 6.25rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .projectAdvisorDetail {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .newsCategory {
+    // display: block;
+    padding: 0 0.5rem;
+
+    .news {
+      margin-top: 1rem;
+    }
+  }
+}

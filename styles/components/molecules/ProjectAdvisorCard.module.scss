@@ -1,0 +1,56 @@
+.projectAdvisorcard {
+  text-align: center;
+  padding: 0 2.625rem;
+  margin: auto;
+  cursor: pointer;
+
+  .imageArea {
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+
+  .textLeft {
+    text-align: left !important;
+  }
+
+  .imageBorder {
+    border-radius: 100%;
+    width: 100%;
+  }
+
+  &Title {
+    font-weight: 500;
+    margin: 0;
+    margin-top: 2rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+  }
+
+  &Subtitle {
+    --lh: 1.5rem;
+    --max-lines: 3;
+    font-weight: 400;
+    margin: 0;
+    margin-top: .75rem;
+    font-family: "Inter";
+    color: #000000;
+    opacity: 0.5;
+    font-size: 1rem;
+    font-style: normal;
+    max-height: calc(var(--lh) * var(--max-lines));
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+}
+
+.paddingCard {
+  padding: 0 !important;
+}

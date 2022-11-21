@@ -1,0 +1,17 @@
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+.date {
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
+  color: var(--dark);
+}
+
+@media (max-width: 576px) {
+  .post {
+    display: block !important;
+  }
+}

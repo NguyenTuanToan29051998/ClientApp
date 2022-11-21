@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--gray-400);
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: var(--black);
+}

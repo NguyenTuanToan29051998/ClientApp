@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  text-align: start;
+
+  .label {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+
+  .decoration {
+    text-decoration: underline;
+  }
+
+  .desc {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--black);
+    margin: 0;
+  }
+}

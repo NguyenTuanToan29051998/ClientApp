@@ -1,0 +1,51 @@
+.wrapper {
+  font-weight: 500;
+  width: 100%;
+
+  .customDropdown {
+    position: relative;
+    margin-top: .5rem !important;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    border-radius: .25rem;
+    color: var(--black);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      position: relative;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 1rem .75rem;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+      }
+    }
+
+    div {
+      width: 100%;
+    }
+  }
+
+  span {
+    color: var(--red);
+  }
+
+  .errorText {
+    margin: 0;
+    margin-top: .25rem;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: var(--red);
+  }
+}

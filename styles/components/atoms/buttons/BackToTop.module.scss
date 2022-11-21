@@ -1,0 +1,13 @@
+.wrapper {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFFFF;
+  border: 1px solid #565C65;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: var(--black);
+  padding: 0.9375rem 1.1875rem;
+
+  svg {
+    margin-left: 0.75rem;
+  }
+}

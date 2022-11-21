@@ -1,0 +1,12 @@
+.textures {
+  position: relative;
+  background-image: url('/assets/partten02.svg');
+  background-size: cover;
+  padding-bottom: 12.5rem;
+
+  .btnArea {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+  }
+}

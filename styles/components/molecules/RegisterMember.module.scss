@@ -1,0 +1,25 @@
+.wrapper {
+  .title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--quaternary);
+    margin-bottom: 0;
+  }
+
+  .dropdown {
+    width: 255px;
+    margin-bottom: 2rem;
+  }
+
+  .btnRemove {
+    align-items: center;
+    gap: .75rem;
+    padding: .5rem .75rem;
+    border: 1px solid var(--black);
+    border-radius: .25rem;
+    color: var(--black);
+    line-height: 1.5rem;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,28 @@
+.wrapper {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .point {
+      padding: 10px 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 24px;
+      background-color: var(--gray);
+      color: #707F8C;
+      cursor: pointer;
+    }
+
+    .selected {
+      background-color: var(--quaternary) !important;
+      color: #ffffff;
+    }
+
+    .line {
+      width: 35px;
+      height: 2px;
+      background-color: var(--gray);
+    }
+  }
+}

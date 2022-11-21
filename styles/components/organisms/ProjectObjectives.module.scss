@@ -1,0 +1,25 @@
+.project {
+  width: 49.875rem;
+  margin: auto;
+  padding-top: 1.75rem;
+
+  &Title {
+    font-weight: 500;
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  &Content {
+    font-weight: 400;
+    margin: 0;
+    margin-top: .75rem;
+    text-align: justify;
+  }
+
+}
+
+@media only screen and (max-width: 950px) {
+  .project {
+    width: 90%;
+  }
+}

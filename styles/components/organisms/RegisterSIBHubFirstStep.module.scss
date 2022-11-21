@@ -1,0 +1,24 @@
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+
+  .label {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+    color: black;
+
+    span {
+      color: var(--red);
+    }
+  }
+
+  .errorText {
+    margin-top: -0.75rem;
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: var(--red);
+  }
+}

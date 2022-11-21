@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+
+  .customRadioButton {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 1rem;
+
+    .RadioButton {
+      display: none;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background: #FFFFFF;
+      border: 1px solid var(--dark);
+      border-radius: 100%;
+    }
+
+    .checked {
+      // background: var(--quaternary);
+      border: 2px solid var(--quaternary);
+      // border-radius: 100%;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--quaternary);
+        border-radius: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.wrapper {
+  text-align: center;
+  background-color: #ffffff;
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .card {
+      width: calc(50% - 1rem);
+      min-width: 300px;
+      cursor: pointer;
+    }
+  }
+
+  .buttonArea {
+    width: auto;
+    max-width: 280px;
+    margin-top: 3rem !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 780px) {
+  .wrapper {
+    .cards {
+      justify-content: center;
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}

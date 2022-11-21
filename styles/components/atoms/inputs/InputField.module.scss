@@ -1,0 +1,55 @@
+.inputField {
+  font-weight: 500;
+  width: 100%;
+
+  span {
+    color: var(--red);
+  }
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--gray-200);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: .5rem;
+  background: var(--gray-100);
+  border-radius: 0;
+  color: black;
+
+  &:focus {
+    outline: 1px solid var(--quaternary);
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--dark-gray);
+  }
+}
+
+.error {
+  border: 1px solid #EB2127;
+
+  &:focus {
+    outline: 1px solid #EB2127;
+  }
+}
+
+.errorText {
+  margin: 0;
+  margin-top: .25rem;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  color: var(--red);
+}
+
+.successText {
+  font-size: 1rem;
+  color: var(--green);
+  line-height: 1.15rem;
+  font-weight: 400;
+  margin-top: .25rem;
+}

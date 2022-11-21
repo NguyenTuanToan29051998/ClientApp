@@ -1,0 +1,128 @@
+.wrapper {
+  max-width: 802px;
+  margin: 0 auto;
+  .date {
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
+  .title {
+    margin-top: 0.5rem;
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  .hashtag {
+    color: var(--quaternary);
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .image {
+    margin-top: 2rem;
+  }
+
+  .content {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+
+  .infoEvents {
+    margin-top: 1.375rem;
+    background-color: #eeeff0;
+    height: 334px;
+    padding: 48px 182px;
+
+    .title {
+      color: #AF3D29;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .timeWrapper {
+      display: flex;
+      gap: 13px;
+      .time {
+        font-size: 1rem;
+        color: black;
+        font-weight: 600;
+      }
+    }
+
+    .addressWrapper {
+      display: flex;
+      gap: 0.875rem;
+      margin-top: 1.375rem;
+      .address {
+        font-size: 1rem;
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .btnArea {
+    width: auto;
+    max-width: 289px;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .textRelatedPosts {
+    padding-left: 5.625rem;
+    align-self: end;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .back {
+    margin-top: 4rem;
+  }
+}
+
+.sibModal {
+  justify-content: center;
+  max-width: 578px !important;
+}
+
+.close {
+  margin: 0.75rem 1.125rem;
+  cursor: pointer;
+}
+
+.btnRegister {
+  margin: 2rem 0;
+}
+
+.formRegister {
+  padding: 0 5rem 1rem 5rem;
+
+  .title {
+    font-size: 1.75rem;
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  .inpWrap {
+    margin-top: 2rem;
+  }
+
+}
+
+@media (max-width: 786px) {
+
+  .infoEvents {
+    padding: 3rem 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .infoEvents {
+    padding: 3rem 0.5rem !important;
+  }
+}

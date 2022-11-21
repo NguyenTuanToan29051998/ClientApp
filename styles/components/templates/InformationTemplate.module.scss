@@ -1,0 +1,136 @@
+.tabs {
+  margin-top: 0.75rem;
+}
+
+.wrapper {
+  margin-top: 2rem;
+
+  .date {
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
+  .title {
+    margin-top: 0.5rem;
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  .hashtagList {
+    display: flex;
+    gap: 21px;
+
+    .hashtag {
+      color: var(--quaternary);
+      font-weight: 400;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .content {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+  }
+
+  .btnArea {
+    width: auto;
+    max-width: 294px;
+    // margin: 6rem auto 1rem;
+    margin: 0 auto;
+    margin-bottom: 43px;
+  }
+
+  .textRelatedPosts {
+    padding-left: 90px;
+    align-self: end;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .textRelatedPostsMobile {
+    display: none;
+  }
+
+  .relatedPosts {
+    padding-left: 90px;
+
+    .postsWrapper {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    .posts {
+      border-bottom: 1px solid #B1B1B1;
+
+      .otherPostTitle {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 24.2px;
+      }
+
+      .subDate {
+        color: var(--dark);
+        margin-top: 0.75rem;
+      }
+    }
+
+    .image {
+      min-width: 142px;
+      height: 122px;
+      // background-size: cover;
+      // background-position: center;
+      background-repeat: round;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    .content {
+      margin-bottom: 1rem;
+    }
+
+    .relatedPosts {
+      padding: 0 0.75rem;
+      margin-bottom: 1.5rem;
+
+      .image {
+        height: 122px;
+      }
+    }
+
+    .textRelatedPosts {
+      display: none;
+    }
+
+    .textRelatedPostsMobile {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .wrapper {
+    .relatedPosts {
+      .posts {
+        .otherPostTitle {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}

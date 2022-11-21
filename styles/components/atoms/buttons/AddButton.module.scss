@@ -1,0 +1,31 @@
+.wrapper {
+  margin-bottom: 3rem;
+  cursor: pointer;
+
+  p {
+    color: var(--black);
+    line-height: 1.5rem;
+    margin-bottom: .875rem;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    padding: .5rem .75rem;
+    border: 1px solid var(--black);
+    border-radius: .25rem;
+    color: var(--black);
+    line-height: 1.5rem;
+    background-color: transparent;
+
+    svg {
+      width: 1rem;
+    }
+  }
+}
+
+.disabled {
+  opacity: .5;
+}

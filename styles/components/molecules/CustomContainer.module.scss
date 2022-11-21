@@ -1,0 +1,27 @@
+.customContainer {
+  width: 100%;
+  padding: .75rem 2rem 10rem;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.medium {
+  max-width: 1274px;
+  padding: 2.5rem 2rem !important;
+}
+
+.large {
+  max-width: calc(var(--max-width-container) - 11rem);
+}
+
+@media only screen and (max-width: 600px) {
+  .customContainer {
+    padding-bottom: 7rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .customContainer {
+    padding: .75rem 1rem 5rem;
+  }
+}

@@ -1,0 +1,96 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2.75rem;
+
+  .leftArea {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2.25rem;
+
+    &Content {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .fbIcon {
+      svg {
+        path {
+          fill: #565C65;
+        }
+      }
+    }
+  }
+
+  .rightArea {
+    width: 50%;
+    max-width: 519px;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    min-height: 16.25rem;
+    justify-content: flex-start;
+
+    h3 {
+      text-align: start;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 2rem;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    svg {
+      width: 0.875rem;
+      height: 0.875rem;
+
+      path {
+        stroke: #1D1929;
+      }
+    }
+
+    .address {
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .btnArea {
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 0 2rem;
+
+    .leftArea {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .rightArea {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0 !important;
+  }
+}
+

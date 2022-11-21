@@ -1,0 +1,75 @@
+.wrapper {
+  width: 37vw;
+  text-align: start;
+  background-color: rgb(253, 253, 253);
+  padding-top: 10px;
+  z-index: 2;
+  margin: 1rem 2.18rem;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  .image {
+    padding-top: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0px 10px 0px 10px;
+  }
+  .boxTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    height: 20vh;
+    .title {
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.5rem;
+      width: 17.5rem;
+      margin: auto;
+    }
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .wrapper {
+    padding-top: 3px;
+    width: 35vw;
+    .image {
+      margin: 0px 3px 3px 3px;
+    }
+    .boxTitle {
+      height: 15vh;
+      .title {
+        width: 17.5rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wrapper {
+    margin: 1rem 1.56rem;
+    .boxTitle {
+      height: 10.4vh;
+      .title {
+        width: 215px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 635px) {
+  .wrapper {
+    width: 90%;
+    padding-top: 3px;
+    margin-bottom: 0px;
+    margin: 1.25rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+  }
+
+}

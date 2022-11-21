@@ -1,0 +1,132 @@
+.hamburger {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(40deg);
+  height: 4px;
+  border-radius: 4px;
+  z-index: 999999;
+  transition: .7s;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  background-color: #000;
+  animation-name: identifier;
+  animation-duration: .7s;
+  animation-fill-mode: both;
+}
+
+@keyframes identifier {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 25px;
+  }
+}
+
+.iconmeunu {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 4px;
+  border-radius: 4px;
+  z-index: 999999;
+  transition: .7s;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  background-color: #000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 4px;
+    border-radius: 4px;
+    transition: .5s;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    background-color: #000;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 4px;
+    transition: .5s;
+    border-radius: 4px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    background-color: #000;
+  }
+
+  &.iconclose {
+    transform: translateY(-50%) rotate(140deg);
+  }
+}
+
+.iconclose {
+  &::before {
+    content: "";
+    transform: translateY(-50%) translateX(100px);
+  }
+
+  &::after {
+    content: "";
+    transform: translateY(-50%) translateX(-100px);
+  }
+}
+
+.arrow {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: black;
+  }
+
+  &::after {
+    content: '';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    background-color: black;
+    transform: translateY(-50%);
+    clip-path: polygon(61% 52%, 0 0, 0 100%);
+  }
+}

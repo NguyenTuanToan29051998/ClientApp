@@ -1,0 +1,338 @@
+.wrapper {
+  background-color: #fff;
+  z-index: 10;
+  transition: .5s;
+
+  .search {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: calc(var(--max-width-container) - 11rem);
+    margin: 0 auto;
+    flex: 1 1 auto;
+
+    .leftArea {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      cursor: pointer;
+      flex-direction: row;
+
+      &Mainlogo {
+        margin-right: 3.5rem;
+        display: flex;
+      }
+
+      &Sublogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
+    .rightArea {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      .hamburgerArea {
+        display: none;
+      }
+
+      .talkToUs {
+        margin: 0;
+        color: var(--black);
+        border-bottom: 1px solid var(--black);
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .searchIcon {
+        display: none;
+      }
+
+      .messageIcon {
+        display: flex;
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .bntArea {
+        width: auto;
+        min-width: 425px;
+      }
+
+      .flg {
+        position: relative;
+
+        .image {
+          border-radius: 100%;
+        }
+
+        .langTitle {
+          margin-left: .5rem;
+          min-width: 77px;
+        }
+
+        .flagArea {
+          position: absolute;
+          padding-top: 1.5rem;
+          // left: 50%;
+          transform: translateX(-50%);
+          // right: 0;
+          z-index: 999;
+
+          &Content {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: .5rem;
+            padding: 1rem .5rem;
+            background: #FFFFFF;
+
+            .lang {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 1rem;
+              padding: .5rem;
+              min-width: 11.5rem;
+              cursor: pointer;
+
+              .checked {
+                svg {
+                  width: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .smallFlg {
+        svg {
+          width: 1.75rem !important;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  .bntArea {
+    .button {
+      background: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1rem 1.3rem;
+      line-height: 19px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 1070px) {
+    .search {
+      margin: 0.75rem 2rem;
+      display: flex;
+      gap: 25px;
+  
+      .angleLeftIcon {
+        align-self: center;
+      }
+  
+      .inpWrapper {
+        position: relative;
+        width: 100%;
+        .inpSearch {
+          border-bottom: 1px solid var(--gray-400) !important;
+          border: none;
+          width: 100%;
+          padding: 9px 40px 9px 0;
+          outline: none;
+          font-weight: 500;
+          font-size: 1rem;
+        }
+  
+        .searchIcon {
+          position: absolute;
+          right: 0;
+          top: 9px;
+        }
+  
+        .closeIcon {
+          position: absolute;
+          right: 0.25rem;
+          top: 9px;
+        }
+      }
+    }
+
+    .header {
+      .rightArea {
+        .talkToUs {
+          display: none;
+        }
+
+        .searchIcon {
+          display: block;
+          margin-right: 1rem;
+        }
+
+        .messageIcon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        .flg {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 880px) {
+    .header {
+      gap: 3rem;
+      padding: 1rem 5rem;
+
+      .leftArea {
+        align-items: center;
+      }
+
+      .rightArea {
+        .bntArea {
+          margin-top: 1.25rem;
+          padding: 0 6.25rem;
+          display: none;
+        }
+
+        .hamburgerArea {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      gap: 1rem;
+      padding: 1rem 3rem;
+
+      .leftArea {
+        align-items: center;
+
+        &Sublogo {
+          max-width: 200px;
+        }
+
+        .barsIcon {
+          display: block;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .rightArea {
+        .bntArea {
+          margin-top: 1.25rem;
+          padding: 0 5rem;
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 610px) {
+    .header {
+      padding: 1rem;
+
+      .leftArea {
+        align-items: center;
+
+        .barsIcon {
+          display: block;
+          margin-right: 0.5rem;
+        }
+
+        &Mainlogo {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .rightArea {
+        .talkToUs {
+          display: none;
+        }
+
+        .bntArea {
+          margin-top: 1.25rem;
+          padding: 0 1.25rem;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.stiky {
+  position: sticky;
+}
+
+.navContainer {
+  background-color: #fff;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  transition: .5s;
+  z-index: 9;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 16px 24px;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    max-width: calc(var(--max-width-container) - 11rem);
+    margin: 0 auto;
+
+    .bntAreaMobile {
+      display: none;
+
+      .button {
+        background: var(--primary);
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 1rem 1.3rem;
+        line-height: 19px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 1.25rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .navContainer {
+    .nav {
+      display: block;
+      .bntAreaMobile {
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

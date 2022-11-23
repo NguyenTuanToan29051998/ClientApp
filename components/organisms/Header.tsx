@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { FC, useContext, useEffect, useState } from 'react';
-import { checkBlueIcon, searchIcon1, searchIcon, angleLeftIcon, closeIcon1 } from '../../public/icons';
+import { checkBlueIcon, searchIcon1, searchIcon, angleLeftIcon, closeIcon1, angleDownIcon } from '../../public/icons';
 import Navigations from './Navigations';
 import useTrans from '../../hooks/useTrans';
 import styles from '../../styles/components/organisms/Header.module.scss';
@@ -30,14 +30,11 @@ const Header: FC<PropsType> = (props) => {
   const [scrollDirection, setScrollDirection] = useState<string | null>(null);
   const [clickedSearch, setClickedSearch] = useState<boolean>(false);
   const [searchContent, setSearchContent] = useState<string>('');
+  const [isEnglish, setIsEngLish] = useState<boolean>(false);
+  const [showDropdownLanguage, setShowDropdownLanguage] = useState<boolean>(false);
 
   const showHeader = () => {
     setShowNavBar(!showNavBar);
-  };
-
-  const handleBtnWhoAreYou = () => {
-    localStorage.setItem('type-user', JSON.stringify(''));
-    router.push('/');
   };
 
   useEffect(() => {
@@ -56,8 +53,8 @@ const Header: FC<PropsType> = (props) => {
 
   const changeLang = (lang: string) => {
     setShowLangChoice(false);
-    changeLanguage(lang);
-    // router.push({ pathname, query }, pathname, { locale: lang });
+    setIsEngLish(lang === "en");
+    setShowDropdownLanguage(false);
   };
 
   const nameTypeUser = () => {
@@ -104,110 +101,39 @@ const Header: FC<PropsType> = (props) => {
             <div className={styles.leftArea}>
               <div
                 className="d-flex"
-                onClick={handleBtnWhoAreYou}
+                onClick={() => router.push('/home')}
                 role="presentation"
               >
-                {!isMasterPage ? (
-                  <div className={styles.leftAreaMainlogo}>
-                    <Image
-                      src="/assets/LOGO-PARTNER-01.svg"
-                      width={50}
-                      height={50}
-                      alt="main-logo"
-                    />
-                  </div>
-                ) : (
-                  <div className={styles.leftAreaSublogo}>
-                    <div className="me-4">
-                      <Image
-                        src="/assets/KHDT.svg"
-                        width={38}
-                        height={36}
-                        alt="main-logo"
-                      />
-                    </div>
-                    <div className="me-3">
-                      <Image
-                        src="/assets/LOGO-PARTNER-02.svg"
-                        width={86}
-                        height={30}
-                        alt="main-logo"
-                      />
-                    </div>
-                    <Image
-                      src="/assets/LOGO-PARTNER-03.svg"
-                      width={18}
-                      height={36}
-                      alt="main-logo"
-                    />
-                  </div>
-                )}
+                <div className={styles.leftAreaMainlogo}>
+                  <Image
+                    src="/assets/logo-toeic.webp"
+                    width={210}
+                    height={70}
+                    alt="main-logo"
+                  />
+                </div>
               </div>
             </div>
             <div className={styles.rightArea}>
-              {!isMasterPage && (
-                <>
-                  <div className="d-flex gap-5 justify-content-center">
-                    <div className="d-flex gap-2 align-items-center">
-                      {/* <p className={styles.talkToUs} onClick={changeShowChatPlugin} role="presentation">{trans.chat}</p> */}
-                      <div className={styles.searchIcon} onClick={() => setClickedSearch(true)} role="presentation">{searchIcon1}</div>
-                      {/* <div className={styles.messageIcon} onClick={changeShowChatPlugin} role="presentation">{messageIcon}</div> */}
-                    </div>
+              <div className={styles.flagArea}>
+                <div className={styles.flagAreaContent} onClick={() => setShowDropdownLanguage(!showDropdownLanguage)} role="presentation">
+                  <div className={styles.lang}>
+                    <Image
+                      src={`${isEnglish ? '/assets/english-flag.svg' : '/assets/vietnam-flag.svg'}`}
+                      width={26}
+                      height={26}
+                      alt={`${isEnglish ? 'English flag icon' : 'Viet Nam flag icon'}`}
+                      className={styles.image}
+                    />
+                    {isEnglish ? trans.English : trans.Vietnamese}
+                    <span className={styles.checked}>{angleDownIcon}</span>
                   </div>
-                  <div className={styles.bntArea}>
-                    <button
-                      style={{ backgroundColor: currentColor[+userType!] }}
-                      onClick={handleBtnWhoAreYou}
-                      className={styles.button}
-                    >
-                      {`${trans.master.youAre}: ${nameTypeUser()}`}
-                    </button>
-                  </div>
-                </>
-              )}
-              <div
-                className={styles.flg}
-                onMouseEnter={() => setShowLangChoice(true)}
-                onMouseLeave={() => setShowLangChoice(false)}
-              >
-                <div className="d-flex align-items-center">
-                  <Image
-                    src={
-                      language.includes("vi")
-                        ? "/assets/vietnam-flag.svg"
-                        : "/assets/english-flag.svg"
-                    }
-                    width={34}
-                    height={34}
-                    alt="Đổi ngôn ngữ"
-                    className={styles.image}
-                  />
-                  {isMasterPage && (
-                    <span className={styles.langTitle}>{trans.lang}</span>
-                  )}
                 </div>
-                {showLangChoice && (
+              </div>
+              {showDropdownLanguage && (
+                <div className={styles.languageList}>
                   <div className={styles.flagArea}>
                     <div className={styles.flagAreaContent}>
-                      <div
-                        className={styles.lang}
-                        onClick={() => changeLang("vi")}
-                        onKeyDown={() => changeLang("vi")}
-                        role="presentation"
-                      >
-                        <Image
-                          src="/assets/vietnam-flag.svg"
-                          width={40}
-                          height={40}
-                          alt="Viet Nam flag icon"
-                          className={styles.image}
-                        />
-                        {trans.Vietnamese}
-                        {language.includes("vi") && (
-                          <span className={styles.checked}>{checkBlueIcon}</span>
-                        )}
-                      </div>
-
                       <div
                         className={styles.lang}
                         onClick={() => changeLang("en")}
@@ -216,23 +142,38 @@ const Header: FC<PropsType> = (props) => {
                       >
                         <Image
                           src="/assets/english-flag.svg"
-                          width={40}
-                          height={40}
+                          width={26}
+                          height={26}
                           alt="English flag icon"
                           className={styles.image}
                         />
                         {trans.English}
-                        {language.includes("en") && (
+                        {isEnglish && (
                           <span className={styles.checked}>{checkBlueIcon}</span>
                         )}
                       </div>
+                      <div className="mt-3">
+                        <div
+                          className={styles.lang}
+                          onClick={() => changeLang("vi")}
+                          onKeyDown={() => changeLang("vi")}
+                          role="presentation"
+                        >
+                          <Image
+                            src="/assets/vietnam-flag.svg"
+                            width={26}
+                            height={26}
+                            alt="Viet Nam flag icon"
+                            className={styles.image}
+                          />
+                          {trans.Vietnamese}
+                          {!isEnglish && (
+                            <span className={styles.checked}>{checkBlueIcon}</span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                )}
-              </div>
-              {!isMasterPage && (
-                <div className={styles.hamburgerArea}>
-                  <MenuIcon onClick={showHeader} iconClose={showNavBar} />
                 </div>
               )}
             </div>
@@ -248,15 +189,6 @@ const Header: FC<PropsType> = (props) => {
                 setShowNavBar={setShowNavBar}
                 navMenus={userType?.includes('3') ? (menus || []).filter(menu => menu.menuUrl !== '/network') : menus!}
               />
-              <div className={styles.bntAreaMobile}>
-                <button
-                  style={{ backgroundColor: currentColor[+userType! - 1] }}
-                  onClick={handleBtnWhoAreYou}
-                  className={styles.button}
-                >
-                  {`${trans.master.youAre}: ${nameTypeUser()}`}
-                </button>
-              </div>
             </>
           )}
         </div>

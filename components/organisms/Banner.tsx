@@ -5,16 +5,25 @@ import useTrans from '../../hooks/useTrans';
 import styles from '../../styles/components/organisms/Banner.module.scss';
 import { useRouter } from 'next/router';
 import { backIcon, nextIcon } from '../../public/icons';
-import { BannerType } from '@/models/banner';
+
+const MOCK_DATAS = [
+  {
+    id: 1,
+    img: '/assets/banner.jpg',
+  },
+  {
+    id: 2,
+    img: '/assets/bannerSib.jpg',
+  },
+  {
+    id: 3,
+    img: '/assets/approach.jpg',
+  },
+];
 
 const DELAY = 5000;
 
-type PropTypes = {
-  bannerValues: BannerType[],
-};
-
-const Banner: FC<PropTypes> = (props) => {
-  const { bannerValues } = props;
+const Banner: FC = () => {
   const trans = useTrans();
   const router = useRouter();
   const [index, setIndex] = useState(0);
@@ -28,16 +37,16 @@ const Banner: FC<PropTypes> = (props) => {
   }, []);
 
   useEffect(() => {
-    setIndex(index === bannerValues.length - 1 ? 0 : index + 1);
+    setIndex(index === MOCK_DATAS.length - 1 ? 0 : index + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
 
   return (
     <div className={styles.wrapper}>
-      {bannerValues.length > 1 && (
+      {MOCK_DATAS.length > 1 && (
         <button
           className={`${styles.iconLeft} ${styles.icon}`}
-          onClick={() => setIndex(!index ? bannerValues.length - 1 : index - 1)}
+          onClick={() => setIndex(!index ? MOCK_DATAS.length - 1 : index - 1)}
           aria-label="Quay lại"
         >
           {backIcon}
@@ -45,8 +54,8 @@ const Banner: FC<PropTypes> = (props) => {
       )}
 
       <div className={styles.slideShow}>
-        {bannerValues.map((data, idx) => (
-          <div key={data.id} className={`${styles.banner} ${idx === index ? styles.show : styles.hide}`} style={{ backgroundImage: `url(${data.image})` }}>
+        {MOCK_DATAS.map((data, idx) => (
+          <div key={data.id} className={`${styles.banner} ${idx === index ? styles.show : styles.hide}`} style={{ backgroundImage: `url(${data.img})` }}>
             <div className={styles.bannerMark}>
               <h2 className={styles.bannerTitle}>{trans.home.banner.title}</h2>
               <p>{trans.home.banner.desc}&nbsp;
@@ -62,10 +71,10 @@ const Banner: FC<PropTypes> = (props) => {
         ))}
       </div>
 
-      {bannerValues.length > 1 && (
+      {MOCK_DATAS.length > 1 && (
         <button
           className={`${styles.iconRight} ${styles.icon}`}
-          onClick={() => setIndex(index === bannerValues.length - 1 ? 0 : index + 1)}
+          onClick={() => setIndex(index === MOCK_DATAS.length - 1 ? 0 : index + 1)}
           aria-label="Tiếp theo"
         >
           {nextIcon}
@@ -73,7 +82,7 @@ const Banner: FC<PropTypes> = (props) => {
       )}
 
       <ul className={styles.dotArea}>
-        {[...Array(bannerValues.length)].map((_, idx) => (
+        {[...Array(MOCK_DATAS.length)].map((_, idx) => (
           <li
             key={Math.random()}
             className={`${styles.dot} ${index === idx && styles.selected}`}

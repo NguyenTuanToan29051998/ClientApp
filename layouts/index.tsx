@@ -9,6 +9,7 @@ import Footer from '../components/organisms/Footer';
 import Header from '../components/organisms/Header';
 // import FacebookChatPlugin from '../components/templates/FacebookChatPlugin';
 import { ContactType } from '../models';
+import { navSIB } from '../public/const';
 
 type PropsType = {
   children: any;
@@ -26,6 +27,7 @@ const Layout: FC<PropsType> = ({ children }) => {
     }
     const user = localStorage.getItem('type-user') || '';
     setUserType(user);
+    setMenus(navSIB);
     axios.all([
       menuApiManagement.getMenuList(Number(user)),
       contactApiManagement.getContactFooter(),

@@ -19,6 +19,7 @@ import { StoryType } from '@/models/story';
 import { MediaType } from '@/models/media';
 import { PolicyType } from '@/models/policy';
 import { BannerType } from '@/models/banner';
+import SupportInformationSection from '../organisms/SupportInformationSection';
 
 type PropTypes = {
   events: EventTypes[] | null,
@@ -89,19 +90,18 @@ const HomePage: FC<PropTypes> = (props) => {
 
   return (
     <>
-      {bannerValues && <Banner bannerValues={bannerValues} />}
-      {userType.includes('0') && (
-        <>
-          <div ref={supportInforRef} />
-          <div ref={storyRef} />
-          {stories && !!stories.length && <StorySection stories={stories} />}
-          <div ref={advisorInforRef} />
-          {advisors && !!advisors.length && <AdvisorSection advisors={advisors} />}
-          <div className="mt-5" ref={supportCenterRef} />
-          <SupportCenterSection datas={trans.home.SIB.SIBsupportCenterValues} title={trans.home.SIBsupportCenter} />
-          <RegisterMemberSection />
-        </>
-      )}
+      <Banner />
+      <>
+        <div ref={supportInforRef} />
+        <SupportInformationSection informations={trans.home.infomationSection.SIBValues} />
+        <div ref={storyRef} />
+        {stories && !!stories.length && <StorySection stories={stories} />}
+        <div ref={advisorInforRef} />
+        {advisors && !!advisors.length && <AdvisorSection advisors={advisors} />}
+        <div className="mt-5" ref={supportCenterRef} />
+        <SupportCenterSection datas={trans.home.SIB.SIBsupportCenterValues} title={trans.home.SIBsupportCenter} />
+        <RegisterMemberSection />
+      </>
       {userType.includes('1') && (
         <>
           <SupportCenterSection datas={trans.home.SIBIntermediaries.supportPrograms} title={trans.home.supportProgram} />

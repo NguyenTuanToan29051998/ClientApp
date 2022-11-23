@@ -39,29 +39,35 @@ const defaultValueThirdStep = {
 
 const navSIB = [
   {
-    menu: 'Trang chủ',
-    subMenus: [],
-    href: '/home',
+    menuName: 'Trang chủ',
+    englishName: '',
+    menuUrl: '/home',
+    subMenus: ['aaa', 'bb'],
   },
   {
-    menu: 'Mạng lưới SIB',
-    subMenus: [],
-    href: '/network',
+    menuName: 'Luyện tập',
+    englishName: '',
+    menuUrl: '/network',
   },
   {
-    menu: 'Truyền thông',
-    subMenus: [],
-    href: '/media/events',
+    menuName: 'Đề thi thử',
+    englishName: '',
+    menuUrl: '/media/events',
   },
   {
-    menu: 'Thư viện',
-    subMenus: [],
-    href: '/library',
+    menuName: 'Blog',
+    englishName: '',
+    menuUrl: '/library',
   },
   {
-    menu: 'Liên hệ',
-    subMenus: [],
-    href: '/contact',
+    menuName: 'TOEIC Tips',
+    englishName: '',
+    menuUrl: '/contact',
+  },
+  {
+    menuName: 'Đăng nhập',
+    englishName: '',
+    menuUrl: '/contact',
   },
 ];
 

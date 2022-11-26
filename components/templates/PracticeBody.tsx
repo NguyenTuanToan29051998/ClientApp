@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { NetworkOfSIB } from '@/models/network';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -7,11 +6,10 @@ import useTrans from '../../hooks/useTrans';
 import styles from '../../styles/components/templates/PracticeBody.module.scss';
 
 type PropType = {
-  listNetworkOfSIB: NetworkOfSIB[];
+
 };
 
 const PracticeBody: NextPage<PropType> = (props) => {
-  const { listNetworkOfSIB } = props;
   const trans = useTrans();
   const router = useRouter();
   const [isReadLess, setIsReadLess] = useState<boolean>(false);

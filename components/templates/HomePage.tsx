@@ -1,37 +1,17 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import Banner from '../organisms/Banner';
-import EventSection from '../organisms/EventSection';
-import NewsSection from '../organisms/NewsSection';
-import StorySection from '../organisms/StorySection';
-import SupportCenterSection from '../organisms/SupportCenterSection';
-import AdvisorSection from '../organisms/AdvisorSection';
-import PolicySection from '../organisms/PolicySection';
-import RegisterMemberSection from '../organisms/RegisterMemberSection';
-import SupportCenterSIBIntermediaries from '../organisms/SupportCenter';
 import QuoteBox from '../molecules/QuoteBox';
 import useTrans from '../../hooks/useTrans';
 import { useRouter } from 'next/router';
 import BackToTop from '../atoms/buttons/BackToTop';
 import styles from '../../styles/components/templates/HomePage.module.scss';
-import { EventTypes } from '@/models/event';
-import { AdvisorType } from '@/models/advisor';
-import { StoryType } from '@/models/story';
-import { MediaType } from '@/models/media';
-import { PolicyType } from '@/models/policy';
-import { BannerType } from '@/models/banner';
-import SupportInformationSection from '../organisms/SupportInformationSection';
+
 
 type PropTypes = {
-  events: EventTypes[] | null,
-  advisors: AdvisorType[] | null,
-  stories: StoryType[] | null,
-  newsList: MediaType[] | null,
-  policyList: PolicyType[] | null,
-  bannerValues: BannerType[] | null,
+
 };
 
-const HomePage: FC<PropTypes> = (props) => {
-  const { events, advisors, stories, newsList, policyList, bannerValues } = props;
+const HomePage: FC<PropTypes> = () => {
   const [userType, setUserType] = useState('');
   const trans = useTrans();
   const supportCenterRef = useRef<HTMLDivElement>(null);
@@ -93,36 +73,10 @@ const HomePage: FC<PropTypes> = (props) => {
       <Banner />
       <>
         <div ref={supportInforRef} />
-        <SupportInformationSection informations={trans.home.infomationSection.SIBValues} />
-        <div ref={storyRef} />
-        {stories && !!stories.length && <StorySection stories={stories} />}
-        <div ref={advisorInforRef} />
-        {advisors && !!advisors.length && <AdvisorSection advisors={advisors} />}
-        <div className="mt-5" ref={supportCenterRef} />
-        <SupportCenterSection datas={trans.home.SIB.SIBsupportCenterValues} title={trans.home.SIBsupportCenter} />
-        <RegisterMemberSection />
       </>
-      {userType.includes('1') && (
-        <>
-          <SupportCenterSection datas={trans.home.SIBIntermediaries.supportPrograms} title={trans.home.supportProgram} />
-          {advisors && !!advisors.length && <AdvisorSection advisors={advisors} />}
-          <SupportCenterSIBIntermediaries />
-          <QuoteBox />
-          <RegisterMemberSection />
-        </>
-      )}
-      {userType.includes('2') && (
-        <>
-          <div className="mt-5" ref={supportInforRef} />
-          <div ref={policyRef} />
-          {policyList && !!policyList.length && <PolicySection policyList={policyList} />}
-        </>
-      )}
+
       <div className={styles.textures}>
         <div ref={eventsRef} />
-        {events && !!events.length && <EventSection events={events} />}
-        <div ref={newsRef} />
-        {newsList && !!newsList.length && <NewsSection newsList={newsList} />}
         <div className={styles.btnArea}>
           <BackToTop />
         </div>

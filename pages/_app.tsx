@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 import { NextPage } from 'next';
 import { CustomProvider } from '../AppContext';
-import FacebookChatPlugin from '../components/templates/FacebookChatPlugin';
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -24,7 +23,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <CustomProvider>
-      <FacebookChatPlugin />
       {getLayout(<Component {...pageProps} />)}
     </CustomProvider>
   );

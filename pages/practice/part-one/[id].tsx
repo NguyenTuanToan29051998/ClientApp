@@ -1,11 +1,8 @@
-import { EventTypes } from '@/models/event';
 import { useRouter } from 'next/router';
 import { ReactElement, useEffect, useState } from 'react';
-import { eventApiManagement } from '../../../api-clients/events';
 import BreadCrumb from '../../../components/molecules/BreadCrumb';
 import CustomContainer from '../../../components/molecules/CustomContainer';
 import CustomLoading from '../../../components/molecules/CustomLoading';
-import MediaEventBodyDetail from '../../../components/templates/MediaEventBodyDetail';
 import useTrans from '../../../hooks/useTrans';
 import Layout from '../../../layouts';
 import { NextPageWithLayout } from '../../_app';

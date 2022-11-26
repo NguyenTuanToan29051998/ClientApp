@@ -1,4 +1,3 @@
-import { NetworkOfSIB } from '@/models/network';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
@@ -6,11 +5,10 @@ import { angleRightIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/PartOneBody.module.scss';
 
 type PropType = {
-  listNetworkOfSIB: NetworkOfSIB[];
+
 };
 
 const PartOneBody: NextPage<PropType> = (props) => {
-  const { listNetworkOfSIB } = props;
   const trans = useTrans();
   const [isReadLess, setIsReadLess] = useState<boolean>(false);
   const [idSeeMore, setIdSeeMore] = useState<number | null>(null);

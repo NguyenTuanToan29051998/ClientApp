@@ -6,15 +6,12 @@ import InputField from '../atoms/inputs/InputField';
 import styles from '../../styles/components/organisms/Footer.module.scss';
 import useTrans from '../../hooks/useTrans';
 import { useRouter } from 'next/router';
-import { ContactType } from '@/models/contact';
 import { sendEmail } from '../../api-clients/footer';
 
 type PropsType = {
-  contact: ContactType;
 }
 
 const Footer: FC<PropsType> = (props) => {
-  const { contact } = props;
   const router = useRouter();
   const [emailValue, setEmailValue] = useState<string>('');
   const [emailInvalid, setEmailInvalid] = useState<boolean>(false);
@@ -65,21 +62,14 @@ const Footer: FC<PropsType> = (props) => {
           />
         </div>
         <div className={`${styles.lineContent}`}>
-          <a href={contact?.facebook} target="__blank" className="d-flex align-items-center gap-3 text-decoration-none">
-            {facebookIcon} <span>ISEECOVID</span>
-          </a>
           <div className="d-flex mt-4 mb-4 align-items-center gap-3">
             {emailIcon}
             <div className="d-flex flex-column">
-              <span>{contact?.email_1}</span>
-              <span>{contact?.email_2}</span>
             </div>
           </div>
           <div className="d-flex align-items-center gap-3">
             {phoneIcon}
             <span>
-              {contact?.phone_1}
-              {contact?.phone_2 ? <><span className={styles.textOpacity}> {trans.footer.number} </span> {contact?.phone_2}</> : ''}
             </span>
           </div>
         </div>

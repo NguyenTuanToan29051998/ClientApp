@@ -47,7 +47,7 @@ const navSIB = [
   {
     menuName: 'Luyện tập',
     englishName: '',
-    menuUrl: '/network',
+    menuUrl: '/practice',
   },
   {
     menuName: 'Đề thi thử',

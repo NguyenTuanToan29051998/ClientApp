@@ -52,7 +52,7 @@ const Layout: FC<PropsType> = ({ children }) => {
         <>
           {/* <FacebookChatPlugin /> */}
           {userType && menus && (<Header menus={menus} userType={userType} />)}
-          <main>
+          <main style={{backgroundColor: '#f2f3f7'}}>
             {children}
           </main>
           <Footer contact={contact!} />

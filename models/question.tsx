@@ -7,3 +7,11 @@ export type QuestionType = {
   createdAt: string,
   modifiedAt: boolean,
 }
+
+export type QuestionPartOneType = {
+  id: number,
+  mp3Link: string,
+  image: string,
+  answer: string[],
+  rightAnswer: number,
+}

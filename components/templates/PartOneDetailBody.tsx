@@ -1,11 +1,10 @@
-import { EventTypes } from '@/models/event';
-import { NetworkOfSIB } from '@/models/network';
 import { QuestionPartOneType } from '@/models/question';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
 import { angleRightIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/PartOneDetailBody.module.scss';
+import SubTopic from '../organisms/SubTopic';
 
 type PropType = {
 	questionList: QuestionPartOneType[];
@@ -78,7 +77,7 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 					<div className={styles.currentTopicList}>
 						<div className="row">
 							<div className={`col-4 ${styles.topicLevelItem}`}>
-								<div className={styles.topicLevelItemName}>Test 1</div>
+								<div className={`${styles.topicLevelItemName} ${styles.currentLevel}`}>Test 1</div>
 							</div>
 							<div className={`col-4 ${styles.topicLevelItem}`}>
 								<div className={styles.topicLevelItemName}>Test 2</div>
@@ -112,6 +111,7 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 							</div>
 						</div>
 					</div>
+					<SubTopic />
 				</div>
 				<div className="col-xxl-8 col-12 col-md-12">
 					<div className={styles.questionView}>

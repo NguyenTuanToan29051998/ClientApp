@@ -1,0 +1,51 @@
+.subTopic {
+	margin-top: 2rem;
+
+	// height: 240px;
+	// overflow-y: auto;
+	&Item {
+		display: grid;
+		color: #777;
+		border-radius: 15px;
+		font-size: 14px;
+		line-height: 21px;
+		height: 55px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		cursor: pointer;
+		padding: 11px 25px 11px;
+		background: #fff;
+
+		&Name {
+			font-size: 14px;
+			line-height: 21px;
+			color: #777;
+		}
+
+		&Progress {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			gap: 8px;
+
+			&Bar {
+				background-color: #d1d3da;
+				flex: 1 1 0%;
+				height: 4px;
+				position: relative;
+
+				.colorPercentBar {
+					width: 5%;
+					position: absolute;
+					bottom: 0px;
+					top: 0px;
+					background-color: #4CAF50;
+				}
+			}
+
+			&Percent {
+				color: rgb(98, 185, 102);
+			}
+		}
+	}
+}

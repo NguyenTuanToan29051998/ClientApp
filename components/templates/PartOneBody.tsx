@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
 import { angleRightIcon } from '../../public/icons';
@@ -10,6 +11,7 @@ type PropType = {
 
 const PartOneBody: NextPage<PropType> = (props) => {
   const trans = useTrans();
+  const router = useRouter();
   const [isReadLess, setIsReadLess] = useState<boolean>(false);
   const [idSeeMore, setIdSeeMore] = useState<number | null>(null);
 
@@ -26,7 +28,7 @@ const PartOneBody: NextPage<PropType> = (props) => {
           <div className="col-xxl-9 col-12 col-md-12">
             <div>
               <div className={styles.practiceName}>PART 1: PHOTOS</div>
-              <div className={styles.practiceList}>
+              <div className={styles.practiceList} onClick={() => router.push('/practice/part-one/1')} role="presentation">
                 <div className={styles.practiceListItem}>
                   <div className={styles.practiceListItemName}>Lesson 1: Predict what you will hear </div>
                 </div>

@@ -3,9 +3,9 @@ import { ReactElement, useEffect, useState } from 'react';
 import Layout from '../../../layouts';
 import CustomContainer from '../../../components/molecules/CustomContainer';
 import CustomLoading from '../../../components/molecules/CustomLoading';
-import PartOneBody from '../../../components/templates/PartOneBody';
+import PartFiveBody from '../../../components/templates/PartFiveBody';
 
-const PartOne: NextPageWithLayout = () => {
+const PartFive: NextPageWithLayout = () => {
 //   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -17,11 +17,11 @@ const PartOne: NextPageWithLayout = () => {
     <CustomContainer size="large">
       {/* {loading && <CustomLoading />} */}
       {/* {!loading && <PracticeBody listNetworkOfSIB={networkOfSIBList} />} */}
-      <PartOneBody />
+      <PartFiveBody />
     </CustomContainer>
   );
 };
-PartOne.getLayout = function getLayout(page: ReactElement) {
+PartFive.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>
       {page}
@@ -29,4 +29,4 @@ PartOne.getLayout = function getLayout(page: ReactElement) {
   );
 };
 
-export default PartOne;
+export default PartFive;

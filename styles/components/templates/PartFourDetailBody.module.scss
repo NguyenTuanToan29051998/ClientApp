@@ -231,8 +231,20 @@
 		background-size: contain;
 	}
 
+	.questionText {
+		margin-top: 16px;
+		font-size: 18px;
+    font-family: inherit!important;
+    font-weight: 500;
+    line-height: 30px;
+    color: #1d1d1d;
+    text-align: justify;
+	}
+
 	.quizChoices {
 		margin-top: 28px;
+		padding-bottom: 16px;
+		border-bottom: 1px solid #ccc;
 
 		&Item {
 			display: flex;

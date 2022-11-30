@@ -1,8 +1,8 @@
 import { QuestionPartOneType } from '@/models/question';
 import type { NextPage } from 'next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useTrans from '../../hooks/useTrans';
-import { angleRightIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon } from '../../public/icons';
+import { angleRightIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon, clockIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/FullTestDetailBody.module.scss';
 import SubTopic from '../organisms/SubTopic';
 
@@ -15,11 +15,33 @@ const FullTestDetailBody: NextPage<PropType> = (props) => {
 	const trans = useTrans();
 	const [isReadLess, setIsReadLess] = useState<boolean>(false);
 	const [idSeeMore, setIdSeeMore] = useState<number | null>(null);
+	const [minutes, setMinutes] = useState<number>(60);
+	const [seconds, setSeconds] = useState<number>(0);
+	const [isStart, setIsStart] = useState<boolean>(false);
 
 	const handleSeeMore = (isSeeMore: boolean, idPost: number) => {
 		setIsReadLess(isSeeMore);
 		setIdSeeMore(idPost);
 	};
+
+	useEffect(() => {
+		let myInterval = setInterval(() => {
+			if (seconds > 0) {
+				setSeconds(seconds - 1);
+			}
+			if (seconds === 0) {
+				if (minutes === 0) {
+					clearInterval(myInterval);
+				} else {
+					setMinutes(minutes - 1);
+					setSeconds(59);
+				}
+			}
+		}, 1000);
+		return () => {
+			clearInterval(myInterval);
+		};
+	});
 
 	return (
 		<>
@@ -108,6 +130,15 @@ const FullTestDetailBody: NextPage<PropType> = (props) => {
 				</div>
 				<div className="col-xxl-8 col-12 col-md-12">
 					<div className={styles.questionView}>
+						<div className="d-flex align-items-center justify-content-center gap-3 mb-3">
+							<div>{clockIcon}</div>
+							<div className="d-flex">
+								{minutes === 0 && seconds === 0 && isStart
+									? null
+									: <div className={styles.time}>{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</div>
+								}
+							</div>
+						</div>
 						<div className="d-flex justify-content-center mb-2">
 							<audio src="https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3" controls={true}>
 								<track kind="captions"></track>

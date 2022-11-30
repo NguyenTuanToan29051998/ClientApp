@@ -9,15 +9,15 @@ import { backIcon, nextIcon } from '../../public/icons';
 const MOCK_DATAS = [
   {
     id: 1,
-    img: '/assets/banner.jpg',
+    img: '/assets/banner-1.png',
   },
   {
     id: 2,
-    img: '/assets/bannerSib.jpg',
+    img: '/assets/banner-2.png',
   },
   {
     id: 3,
-    img: '/assets/approach.jpg',
+    img: '/assets/banner-3.jpg',
   },
 ];
 

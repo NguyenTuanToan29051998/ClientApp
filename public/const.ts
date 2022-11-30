@@ -1,4 +1,4 @@
-import { informationIcon1, informationIcon2, informationIcon3, informationIcon4 } from "./icons";
+// import { informationIcon1, informationIcon2, informationIcon3, informationIcon4 } from "./icons";
 
 const REGEX_EMAIL = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -37,37 +37,134 @@ const defaultValueThirdStep = {
   benefit: '',
 };
 
+const menuToeic = [
+  {
+    menu: 'Trang chủ',
+    subMenus: [],
+    href: '#'
+  },
+  {
+    menu: 'Luyện tập',
+    subMenus: ['Gói hỗ trợ SIB', 'Đào tạo & huấn luyện tổng quát', 'Kết nối doanh nghiệp', 'Mở rộng thị trường'],
+    href: '#'
+  },
+  {
+    menu: 'Đề thi thử',
+    subMenus: ['Danh sách tổ chức trung gian', 'Câu chuyện thành công'],
+  },
+  {
+    menu: 'Blog',
+    subMenus: ['SIB Hub', 'Đánh giá sức khoẻ doanh nghiệp', 'Nhu cầu thông tin - Đề xuất chính sách'],
+  },
+  {
+    menu: 'TOEIC Tips',
+    subMenus: ['Sách', 'Video', 'Tài liệu'],
+  },
+  {
+    menu: 'Đăng nhập',
+    subMenus: ['Sự kiện', 'Tin tức'],
+  },
+];
+
 const navSIB = [
   {
     menuName: 'Trang chủ',
     englishName: '',
     menuUrl: '/home',
-    subMenus: ['aaa', 'bb'],
+    subMenus: [],
   },
   {
     menuName: 'Luyện tập',
     englishName: '',
     menuUrl: '/practice',
+    subMenus: [
+      {
+        name: 'PHẦN 1: MÔ TẢ TRANH',
+        url: '/practice/part-one',
+      },
+      {
+        name: 'PHẦN 2: HỎI - ĐÁP',
+        url: '/practice/part-two',
+      },
+      {
+        name: 'PHẦN 3: ĐOẠN HỘI THOẠI',
+        url: '/practice/part-three',
+      },
+      {
+        name: 'PHẦN 4: BÀI NÓI NGẮN',
+        url: '/practice/part-four',
+      },
+      {
+        name: 'PHẦN 5: HOÀN THÀNH CÂU',
+        url: '/practice/part-five',
+      },
+      {
+        name: 'PHẦN 6: HOÀN THÀNH ĐOẠN VĂN',
+        url: '/practice/part-six',
+      },
+      {
+        name: 'PHẦN 7: ĐỌC HIỂU - ĐOẠN ĐƠN',
+        url: '/practice/part-seven-single',
+      },
+      {
+        name: 'PHẦN 7: ĐỌC HIỂU - ĐOẠN KÉP',
+        url: '/practice/part-seven-double',
+      },
+      {
+        name: 'PHẦN 7: ĐỌC HIỂU - ĐOẠN BA',
+        url: '/practice/part-seven-triple',
+      },
+      {
+        name: 'NGỮ PHÁP',
+        url: '/practice/grammar',
+      },
+      {
+        name: 'TỪ VỰNG',
+        url: '/practice/vocabulary',
+      },
+    ],
   },
   {
     menuName: 'Đề thi thử',
     englishName: '',
     menuUrl: '/media/events',
+    subMenus: [
+      {
+        name: 'Full Test',
+        url: '/test/full-test',
+      },
+      {
+        name: 'Mini Test',
+        url: '/test/mini-test',
+      },
+    ]
   },
   {
     menuName: 'Blog',
     englishName: '',
     menuUrl: '/library',
+    subMenus: [],
   },
   {
     menuName: 'TOEIC Tips',
     englishName: '',
     menuUrl: '/contact',
+    subMenus: [
+      {
+        name: 'TOEIC Listening Tips',
+        url: '/test/full-test',
+      },
+      {
+        name: 'TOEIC Reading Tips',
+        url: '/test/mini-test',
+      },
+    ],
   },
   {
     menuName: 'Đăng nhập',
     englishName: '',
     menuUrl: '/contact',
+    subMenus: [],
   },
 ];
 
@@ -148,19 +245,19 @@ const navPolicyMaker = [
 const informationSIBs = [
   {
     title: 'Gói hỗ trợ SIB',
-    icon: informationIcon1,
+    // icon: informationIcon1,
   },
   {
     title: 'Đào tạo và huấn luyện tổng quát',
-    icon: informationIcon2,
+    // icon: informationIcon2,
   },
   {
     title: 'Kết nối doanh nghiệp',
-    icon: informationIcon3,
+    // icon: informationIcon3,
   },
   {
     title: 'Mở rộng thị trường',
-    icon: informationIcon4,
+    // icon: informationIcon4,
   },
 ];
 
@@ -328,6 +425,7 @@ export {
   navPolicyMaker,
   navIntermediary,
   navSIB,
+  menuToeic,
   defaultValueFirstStep,
   defaultValueSecondStep,
   defaultValueThirdStep,

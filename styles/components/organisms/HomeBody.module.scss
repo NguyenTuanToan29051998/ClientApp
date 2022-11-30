@@ -1,0 +1,189 @@
+
+.title {
+  color: var(--titleColor);
+  margin: 20px 0;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.row {
+  --bs-gutter-x: 1rem !important;
+}
+
+.textSeo {
+  margin-top: 1rem !important;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto 40px;
+  .titleH2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .desc {
+    margin-top: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.partItem {
+
+  .listen {
+    font-size: 35px;
+    margin-top: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .data {
+    box-shadow: 0 6px 15px rgb(218 220 237 / 50%);
+    border-radius: 20px;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    .avatar {
+      height: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .avatarPartOne {
+      background-image: url("/assets/part-1.webp");
+    }
+
+    .avatarPartTwo {
+      background-image: url("/assets/part-2.webp");
+    }
+
+    .avatarPartThree {
+      background-image: url("/assets/part-3.webp");
+    }
+
+    .avatarPartFour {
+      background-image: url("/assets/part-4.webp");
+    }
+
+    .avatarPartFive {
+      background-image: url("/assets/part-5.webp");
+    }
+
+    .avatarPartSix {
+      background-image: url("/assets/part-6.webp");
+    }
+
+    .avatarPartSeven {
+      background-image: url("/assets/part-7.webp");
+    }
+
+    .content {
+      padding: 8px 16px 16px;
+      .shortName {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+      .desc {
+        color: #505050;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.testItemPanel {
+
+  .card {
+    width: 100%;
+    height: 185px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16px 32px 0 32px;
+    color: white;
+    display: grid;
+
+    &Title {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    &Desc {
+      width: 70%;
+      font-size: 16px;
+    }
+
+    .testItemFunJoin {
+      display: flex;
+      justify-content: flex-end;
+      align-self: flex-end;
+
+      &Btn {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        border-radius: 15px;
+        font-size: 24px;
+        font-weight: 700;
+        background: #636cf5;
+        color: #fff;
+        padding: 0 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .vocabularyImg{
+    background-image: url("/assets/vocabulary.webp");
+  }
+
+  .grammarImg{
+    background-image: url("/assets/grammar.webp");
+  }
+}
+
+.introduction {
+  background: inherit;
+  padding: 50px 0;
+  font-family: inherit!important;
+  .listIntro {
+    .btnShowContent {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
+      color: #34447c;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    .image {
+      height: 8.75rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    .image {
+      width: 100%;
+      height: 13.75rem;
+    }
+  }
+
+  .distanceFooter {
+    margin-bottom: 0;
+  }
+}

@@ -35,7 +35,7 @@
         border-radius: 0 0 0.5rem 0.5rem;
         position: absolute;
         width: max-content;
-        padding: 0 3rem 0 0.875rem;
+        // padding: 0 3rem 0 0.875rem;
         z-index: 1000;
         color: var(--Gray-20);
 
@@ -50,6 +50,33 @@
 
       .angleDownUpIcon {
         display: none;
+      }
+    }
+
+    .selectMenu {
+      width: 320px;
+      background: #fff;
+      border-radius: 5px;
+      max-height: 404px;
+      overflow-y: auto;
+
+      .subMenu {
+        color: #212121;
+        padding: 16px;
+        font-weight: 400;
+        margin-bottom: 0;
+        &:hover {
+          background: hsla(0,0%,80%,.5);
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 6px !important;
+        background-color: #d0d0d0;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: #0003;
       }
     }
 

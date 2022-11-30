@@ -1,0 +1,68 @@
+
+	.titleH1 {
+		text-align: center;
+		font-weight: 500;
+		font-size: 30px;
+		color: #1d1d1d;
+		padding: 30px 0;
+	}
+	
+	.practiceListView {
+		.practiceName {
+			color: #333;
+			font-weight: 700;
+			font-size: 20px;
+		}
+	
+		.practiceList {
+			margin-top: 12px;
+	
+			&Item {
+				background: #fff;
+				padding: 16px;
+				border-bottom: 1px solid #f2f3f7;
+				display: flex;
+				cursor: pointer;
+				align-items: center;
+	
+				&:hover {
+					transform: translateZ(1px);
+					box-shadow: 0 4px 6px #e8eaf1;
+				}
+	
+				&Name {
+					color: #535353;
+					font-weight: 500;
+					font-size: 18px;
+					display: flex;
+					align-items: center;
+	
+					&:hover {
+						color: #636cf5;
+					}
+				}
+	
+				&Progress {
+					flex: 1;
+					display: flex;
+					justify-content: flex-end;
+	
+					.progressBox {
+						width: 100px;
+						height: 34px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 5px;
+						font-size: 16px;
+						font-weight: 700;
+						border: 1.5px solid rgb(186, 205, 255);
+						background-color: rgb(232, 238, 255);
+						color: rgb(101, 110, 241);
+					}
+				}
+			}
+	
+		}
+	}
+

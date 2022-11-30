@@ -8,9 +8,9 @@ import Layout from '../../../layouts';
 import { NextPageWithLayout } from '../../_app';
 import CustomHead from '../../../components/atoms/headers/CustomHead';
 import { QuestionPartOneType } from '@/models/question';
-import PartOneDetailBody from '../../../components/templates/PartOneDetailBody';
+import FullTestDetailBody from '../../../components/templates/FullTestDetailBody';
 
-const PartTwoDetail: NextPageWithLayout = (props: any) => {
+const FullTestDetail: NextPageWithLayout = (props: any) => {
 	const router = useRouter();
 	const { id, page } = router.query;
 	const trans = useTrans();
@@ -36,12 +36,12 @@ const PartTwoDetail: NextPageWithLayout = (props: any) => {
 	return (
 		<CustomContainer size="large">
 			{/* {loading && <CustomLoading />} */}
-			<PartOneDetailBody questionList={questionList} />
+			<FullTestDetailBody questionList={questionList} />
 		</CustomContainer>
 	);
 };
 
-PartTwoDetail.getLayout = function getLayout(page: ReactElement) {
+FullTestDetail.getLayout = function getLayout(page: ReactElement) {
 	return (
 		<Layout>
 			{page}
@@ -49,4 +49,4 @@ PartTwoDetail.getLayout = function getLayout(page: ReactElement) {
 	);
 };
 
-export default PartTwoDetail;
+export default FullTestDetail;

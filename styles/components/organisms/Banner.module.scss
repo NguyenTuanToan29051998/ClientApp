@@ -37,7 +37,9 @@
       width: 100vw;
       height: calc(100vh - 150px);
       background-size: cover;
-      background-position: top;
+      // background-position: top;
+      background-position: center;
+      background-repeat: no-repeat;
 
       &Mark {
         position: absolute;

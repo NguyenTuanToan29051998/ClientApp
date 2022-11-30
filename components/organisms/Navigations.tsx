@@ -2,7 +2,7 @@ import { Menu } from '@/models/menu';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Dispatch, FC, SetStateAction, useContext, useState } from 'react';
+import { Dispatch, FC, MouseEvent, SetStateAction, useContext, useState } from 'react';
 import { CustomContext } from '../../AppContext';
 import useTrans from '../../hooks/useTrans';
 import { checkBlueIcon, searchIcon, angleDownIcon } from '../../public/icons';
@@ -24,6 +24,8 @@ const Navigations: FC<PropsType> = (props) => {
   const [isEnglish, setIsEngLish] = useState<boolean>(false);
   const [showDropdownLanguage, setShowDropdownLanguage] = useState<boolean>(false);
   const [inputSearch, setInputSearch] = useState<string>('');
+  const [subMenu, setSubMenu] = useState<string>('');
+  const [tabMenu, setTabMenu] = useState<string>('Trang chủ');
 
   const handleSelectedNav = (path: string) => {
     if (path.includes('/home')) {
@@ -63,6 +65,51 @@ const Navigations: FC<PropsType> = (props) => {
     router.replace(`/search?searchInput=${inputSearch}`);
   };
 
+  const handleHoverMenu = (menu: string) => {
+    setSubMenu(menu);
+  };
+
+  const handleSubmenu = (urlPage: string, event: any) => {
+    if (event) event.stopPropagation();
+    setSubMenu('');
+    // switch (idSubmenu) {
+    //   case 0:
+    //     router.push('/practice/part-one');
+    //     break;
+    //   case 1:
+    //     router.push('/practice/part-two');
+    //     break;
+    //   case 2:
+    //     router.push('/practice/part-three');
+    //     break;
+    //   case 3:
+    //     router.push('/practice/part-four');
+    //     break;
+    //   case 4:
+    //     router.push('/practice/part-five');
+    //   break;
+    //   case 5:
+    //     router.push('/practice/part-six');
+    //     break;
+    //   case 6:
+    //     router.push('/practice/part-seven-single');
+    //     break;
+    //   case 7:
+    //     router.push('/practice/part-seven-double');
+    //     break;
+    //   case 8:
+    //     router.push('/practice/part-seven-triple');
+    //     break;
+    //   case 9:
+    //     router.push('/practice/grammar');
+    //     break;
+    //   default:
+    //     router.push('/practice/vocabulary');
+    //     break;
+    // }
+    router.push(urlPage);
+  };
+
   return (
     <div className={styles.wrapper}>
       <ul className={`d-flex flex-fill ${styles.navbar} ${showNavBar && styles.display}`}>
@@ -79,7 +126,20 @@ const Navigations: FC<PropsType> = (props) => {
                 href={nav.menuUrl}
                 passHref
               >
-                <a className={handleSelectedNav(nav.menuUrl) && styles.selected || ''} href="replace">{language.includes("vi") ? nav.menuName : nav.englishName}</a>
+                <div>
+                <a className={handleSelectedNav(nav.menuUrl) && styles.selected || ''} href="replace" onMouseEnter={() => handleHoverMenu(nav.menuName)}>{language.includes("vi") ? nav.menuName : nav.englishName}</a>
+                <div className={styles.selectMenu} onMouseLeave={() => setSubMenu('')}>
+                  {(subMenu === nav.menuName && nav.subMenus.length !== 0) && (
+                    <div className="d-flex flex-column mt-3">
+                      {nav.subMenus.map(subMenus => {
+                        return (
+                          <p className={styles.subMenu} key={Math.random()} onClick={(e) => handleSubmenu(subMenus.url, e)} role="presentation">{subMenus.name}</p>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+                </div>
               </Link>
             </li>
           );

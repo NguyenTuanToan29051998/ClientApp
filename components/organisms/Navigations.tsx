@@ -72,41 +72,6 @@ const Navigations: FC<PropsType> = (props) => {
   const handleSubmenu = (urlPage: string, event: any) => {
     if (event) event.stopPropagation();
     setSubMenu('');
-    // switch (idSubmenu) {
-    //   case 0:
-    //     router.push('/practice/part-one');
-    //     break;
-    //   case 1:
-    //     router.push('/practice/part-two');
-    //     break;
-    //   case 2:
-    //     router.push('/practice/part-three');
-    //     break;
-    //   case 3:
-    //     router.push('/practice/part-four');
-    //     break;
-    //   case 4:
-    //     router.push('/practice/part-five');
-    //   break;
-    //   case 5:
-    //     router.push('/practice/part-six');
-    //     break;
-    //   case 6:
-    //     router.push('/practice/part-seven-single');
-    //     break;
-    //   case 7:
-    //     router.push('/practice/part-seven-double');
-    //     break;
-    //   case 8:
-    //     router.push('/practice/part-seven-triple');
-    //     break;
-    //   case 9:
-    //     router.push('/practice/grammar');
-    //     break;
-    //   default:
-    //     router.push('/practice/vocabulary');
-    //     break;
-    // }
     router.push(urlPage);
   };
 

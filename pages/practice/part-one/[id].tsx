@@ -19,8 +19,8 @@ const PartTwoDetail: NextPageWithLayout = (props: any) => {
 			id: 1,
 			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
 			image: 'string',
-			answer: ['There are some tables and chairs outdoors', 'There are some people sitting at the tables.', 'There are plastic umbrellas on the tables.', 'There are many flowers in the garden.'],
-			rightAnswer: 0,
+			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
+			rightAnswer: 1,
 		}
 	]);
 	const [loading, setLoading] = useState<boolean>(true);

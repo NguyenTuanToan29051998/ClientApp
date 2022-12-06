@@ -255,4 +255,32 @@
 			}
 		}
 	}
+
+	.quizExplanation {
+		padding-left: 16px;
+		.explanationBtn {
+			font-weight: 500;
+			font-size: 0.8125rem;
+			line-height: 1.75;
+			padding: 4px 5px;
+			color: rgb(25, 118, 210);
+			border-bottom: 0.5px solid #717171;
+			cursor: pointer;
+			&:hover {
+				text-decoration: none;
+				background-color: rgba(25, 118, 210, 0.04);
+			}
+		}
+
+		.explanationContent {
+			color: #666;
+    	font-size: 16px;
+			padding: 16px 0;
+			line-height: 1.5;
+
+			.boldText {
+				font-weight: 700;
+			}
+		}
+	}
 }

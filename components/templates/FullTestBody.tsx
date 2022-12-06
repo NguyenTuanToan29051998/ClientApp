@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
-import { angleRightIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/FullTestBody.module.scss';
 
 type PropType = {

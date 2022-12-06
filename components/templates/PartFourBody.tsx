@@ -4,6 +4,7 @@ import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
 import { angleRightIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/PartFourBody.module.scss';
+import OtherPractices from '../organisms/OtherPractices';
 
 type PropType = {
 
@@ -64,36 +65,7 @@ const PartFourBody: NextPage<PropType> = (props) => {
           </div>
           <div className="col-xxl-3 col-12 col-md-12">
             <div className={styles.otherPractices}>Other Practices</div>
-            <div className={styles.otherPracticesList}>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 1: Mô tả tranh</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 2: Hỏi - Đáp</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 3: Đoạn hội thoại</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 4: Bài nói ngắn</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 5: Hoàn thành câu</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 6: Hoàn thành đoạn văn</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-              <div className={styles.otherPracticesListItem}>
-                <div className={styles.otherPracticesListItemName}>Phần 7: Đoạn đơn</div>
-                <div className={styles.rightIcon}>{angleRightIcon}</div>
-              </div>
-            </div>
+            <OtherPractices />
           </div>
         </div>
       </div>

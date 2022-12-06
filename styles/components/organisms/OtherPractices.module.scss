@@ -1,0 +1,24 @@
+.otherPracticesList {
+	margin-top: 12px;
+
+	&Item {
+		background: #fff;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		padding: 16px;
+		margin-bottom: 10px;
+		cursor: pointer;
+
+		&Name {
+			color: #535353;
+		}
+
+		.rightIcon {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+}

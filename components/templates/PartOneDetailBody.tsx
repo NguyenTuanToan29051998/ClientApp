@@ -1,5 +1,6 @@
 import { QuestionPartOneType } from '@/models/question';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
 import { angleRightIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon } from '../../public/icons';
@@ -13,12 +14,66 @@ type PropType = {
 const PartOneDetailBody: NextPage<PropType> = (props) => {
 	const { questionList } = props;
 	const trans = useTrans();
+	const router = useRouter();
+	const { id } = router.query;
+	const [currentQuestion, setCurrentQuestion] = useState(questionList.find((question: QuestionPartOneType) => question.id === +(id as string)));
+	const [isShowExplanation, setIsShowExplanation] = useState<boolean>(true);
+	const [numberSelectedAnswer, setNumberSelectedAnswer] = useState<number | null>(null);
 	const [isReadLess, setIsReadLess] = useState<boolean>(false);
 	const [idSeeMore, setIdSeeMore] = useState<number | null>(null);
 
 	const handleSeeMore = (isSeeMore: boolean, idPost: number) => {
 		setIsReadLess(isSeeMore);
 		setIdSeeMore(idPost);
+	};
+
+	const handleShowExplanationElement = () => {
+		const handleAnswerElement = (answer: string, index: number) => {
+			switch (index) {
+				case 0:
+					return <div className={currentQuestion?.rightAnswer === index ? styles.boldText : ''}>(A) {answer}</div>;
+				case 1:
+					return <div className={currentQuestion?.rightAnswer === index ? styles.boldText : ''}>(B) {answer}</div>;
+				case 2:
+					return <div className={currentQuestion?.rightAnswer === index ? styles.boldText : ''}>(C) {answer}</div>;
+				default:
+					return <div className={currentQuestion?.rightAnswer === index ? styles.boldText : ''}>(D) {answer}</div>;
+			}
+		};
+		return (
+			<div className={styles.quizExplanation}>
+				<div className={styles.explanationBtn} onClick={() => setIsShowExplanation(!isShowExplanation)} role="presentation">
+					{isShowExplanation ? "Hide Explanation" : "Show Explanation"}
+				</div>
+				{isShowExplanation && (
+					<div className={styles.explanationContent}>
+						<div className={styles.boldText}>Transcript: </div>
+						{currentQuestion?.answer.map((answer, index) => (
+							handleAnswerElement(answer, index)
+						))}
+					</div>
+				)}
+			</div>
+		);
+	};
+
+	const handleResultIcon = (index: number) => {
+		if (!numberSelectedAnswer) return <div>{answerSelectIcon}</div>;
+		console.log(numberSelectedAnswer, index, 'number');
+		// if (currentQuestion?.rightAnswer === numberSelectedAnswer && index === currentQuestion?.rightAnswer) {
+		// 	return <div>{correctResultIcon}</div>;
+		// } else if (index === currentQuestion?.rightAnswer ) {
+		// 	return <div>{incorrectResultIcon}</div>;
+		// } else return <div>{answerSelectIcon}</div>;
+		if (numberSelectedAnswer === index) {
+			if (index === currentQuestion?.rightAnswer) {
+				return <div>{correctResultIcon}</div>;
+			} else {
+				return <div>{incorrectResultIcon}</div>;
+			}
+		} else {
+			return <div>{answerSelectIcon}</div>;
+		}
 	};
 
 	return (
@@ -122,22 +177,34 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 						</div>
 						<div className={styles.questionImage}></div>
 						<div className={styles.quizChoices}>
-							<div className={styles.quizChoicesItem}>
-								<div>{correctResultIcon}</div>
+							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(0)} role="presentation">
+								{handleResultIcon(0)}
 								<div className={styles.quizChoicesItemContent}>(A)</div>
 							</div>
-							<div className={styles.quizChoicesItem}>
-								<div>{incorrectResultIcon}</div>
+							{currentQuestion?.rightAnswer === 0 && numberSelectedAnswer && (
+								handleShowExplanationElement()
+							)}
+							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(1)} role="presentation">
+								{handleResultIcon(1)}
 								<div className={styles.quizChoicesItemContent}>(B)</div>
 							</div>
-							<div className={styles.quizChoicesItem}>
-								<div>{answerSelectIcon}</div>
+							{currentQuestion?.rightAnswer === 1 && numberSelectedAnswer && (
+								handleShowExplanationElement()
+							)}
+							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(2)} role="presentation">
+								{handleResultIcon(2)}
 								<div className={styles.quizChoicesItemContent}>(C)</div>
 							</div>
-							<div className={styles.quizChoicesItem}>
-								<div>{answerSelectIcon}</div>
+							{currentQuestion?.rightAnswer === 2 && numberSelectedAnswer && (
+								handleShowExplanationElement()
+							)}
+							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(3)} role="presentation">
+								{handleResultIcon(3)}
 								<div className={styles.quizChoicesItemContent}>(D)</div>
 							</div>
+							{currentQuestion?.rightAnswer === 3 && numberSelectedAnswer && (
+								handleShowExplanationElement()
+							)}
 						</div>
 					</div>
 				</div>

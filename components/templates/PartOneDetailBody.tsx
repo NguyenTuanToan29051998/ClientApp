@@ -1,24 +1,29 @@
 import { QuestionPartOneType } from '@/models/question';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import useTrans from '../../hooks/useTrans';
 import { angleRightIcon, angleRightWhiteIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/PartOneDetailBody.module.scss';
+import CustomModal from '../organisms/CustomModal';
 import SubTopic from '../organisms/SubTopic';
 
 type PropType = {
 	questionList: QuestionPartOneType[];
+	setQuestionList: Dispatch<SetStateAction<QuestionPartOneType[]>>
 };
 
 const PartOneDetailBody: NextPage<PropType> = (props) => {
-	const { questionList } = props;
+	const { questionList, setQuestionList } = props;
 	const trans = useTrans();
 	const router = useRouter();
 	const { id } = router.query;
-	const [currentQuestion, setCurrentQuestion] = useState(questionList.find((question: QuestionPartOneType) => question.id === +(id as string)));
+	const [currentQuestion, setCurrentQuestion] = useState<QuestionPartOneType | undefined>(questionList[0]);
 	const [isShowExplanation, setIsShowExplanation] = useState<boolean>(true);
-	const [numberSelectedAnswer, setNumberSelectedAnswer] = useState<number>(-1);
+	const [numberSelectedAnswer, setNumberSelectedAnswer] = useState<number | undefined>(-1);
+	const [totalCorrectAnswers, setTotalCorrectAnswers] = useState<number>(0);
+	const [totalIncorrectAnswers, setTotalIncorrectAnswers] = useState<number>(0);
+	const [showModal, setShowModal] = useState<boolean>(false);
 
 	const handleShowExplanationElement = () => {
 		const handleAnswerElement = (answer: string, index: number) => {
@@ -62,10 +67,62 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 		}
 	};
 
-	const handleSelectedAnswer = (index: number) => {
+	const handleSelectedAnswer = ( index: number) => {
 		if (numberSelectedAnswer !== -1) return;
-		setNumberSelectedAnswer(index);
+		setNumberSelectedAnswer(currentQuestion?.selectedAnswer !== -1 ? currentQuestion?.selectedAnswer : index);
+		setQuestionList(questionList.map(val => {
+			if (val.id === currentQuestion?.id) {
+				return { ...val, selectedAnswer: index };
+			}
+			return val;
+		}));
 	};
+
+	const handleSelectedQuestion = (idQuestion: number) => {
+		setIsShowExplanation(true);
+		setNumberSelectedAnswer(questionList.find((question: QuestionPartOneType) => question.id === idQuestion)?.selectedAnswer);
+		setCurrentQuestion(questionList.find((question: QuestionPartOneType) => question.id === idQuestion));
+	};
+
+	const handleNextQuestion = () => {
+		questionList.find((question: QuestionPartOneType, index) => {
+			if (question.id === currentQuestion?.id) {
+				setCurrentQuestion(questionList.find((_, ind) => ind === index+1));
+			}
+		});
+	};
+
+	const handleRestartExam = () => {
+		setShowModal(false);
+		setQuestionList(questionList.map(val => {
+			return { ...val, selectedAnswer: -1 };
+		}));
+		setCurrentQuestion(questionList[0]);
+		setNumberSelectedAnswer(-1);
+	};
+
+	useEffect(() => {
+		const {totalCorrect, totalIncorrect} = questionList.reduce(
+			(pre, cur) => {
+				if (cur.rightAnswer === cur.selectedAnswer) {
+					pre.totalCorrect++;
+					return pre;
+				}
+				if (cur.rightAnswer !== cur.selectedAnswer && cur.selectedAnswer !== -1) {
+					pre.totalIncorrect++;
+					return pre;
+				}
+				return pre;
+			},
+			{
+				totalCorrect: 0,
+				totalIncorrect: 0,
+			},
+		);
+		setTotalCorrectAnswers(totalCorrect);
+		setTotalIncorrectAnswers(totalIncorrect);
+
+	}, [questionList]);
 
 	return (
 		<>
@@ -78,12 +135,14 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 						<div className={styles.questionPaletteBody}>
 							<div className={styles.questionsList}>
 								<div className={styles.questionsListRow}>
-									{/* <div className={`${styles.questionItem} ${styles.correct}`}>1</div>
-									<div className={`${styles.questionItem} ${styles.incorrect}`}>2</div>
-									<div className={`${styles.questionItem} ${styles.itemCurrent}`}>3</div> */}
 									{questionList.map((item, index) => {
 										return (
-											<div className={styles.questionItem} key={item.id}>{index + 1}</div>
+											<div
+												className={`${styles.questionItem} ${item?.selectedAnswer !== -1 && ((item?.rightAnswer === item?.selectedAnswer) ? styles.correct : styles.incorrect)} ${currentQuestion?.id === item.id && styles.itemCurrent}`}
+												key={item.id}
+												onClick={() => handleSelectedQuestion(item.id)}
+												role="presentation"
+											>{index + 1}</div>
 										);
 									})}
 								</div>
@@ -91,15 +150,15 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 							<div className={styles.questionsStat}>
 								<div className={styles.questionsStatItem}>
 									<div className={styles.greenSquare} />
-									<div className={styles.questionsStatItemText}>1/6 Correct</div>
+									<div className={styles.questionsStatItemText}>{totalCorrectAnswers}/6 Correct</div>
 								</div>
 								<div className={styles.questionsStatItem}>
 									<div className={styles.redSquare} />
-									<div className={styles.questionsStatItemText}>1/6 Incorrect</div>
+									<div className={styles.questionsStatItemText}>{totalIncorrectAnswers}/6 Incorrect</div>
 								</div>
 							</div>
 						</div>
-						<div className={styles.questionPaletteFooter}>
+						<div className={styles.questionPaletteFooter} onClick={() => setShowModal(true)} role="presentation">
 							<div className={styles.btnRestart}>
 								<div className="d-flex">{restartIcon}</div>
 								<div>Restart</div>
@@ -168,7 +227,7 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 								<track kind="captions"></track>
 							</audio>
 						</div>
-						<div className={styles.questionImage}></div>
+						<div className={styles.questionImage} style={{ backgroundImage: `url(${currentQuestion?.image})` }} />
 						<div className={styles.quizChoices}>
 							<div className={styles.quizChoicesItem} onClick={() => handleSelectedAnswer(0)} role="presentation">
 								{handleResultIcon(0)}
@@ -201,10 +260,18 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 						</div>
 					</div>
 					<div className={styles.btnNext}>
-						<div className={styles.text}>Next</div>
+						<div className={styles.text} onClick={() => handleNextQuestion()} role="presentation">Next</div>
 						<div className="d-flex">{angleRightWhiteIcon}</div>
 					</div>
 				</div>
+
+				<CustomModal title="Restart" show={showModal} setShow={setShowModal}>
+					<div className="text-align-justify mb-3">Do you want to restart your test? Your test progress won`t be saved.</div>
+					<div className={styles.action}>
+						<div className={styles.btnCancel} onClick={() => setShowModal(false)} role="presentation">Cancel</div>
+						<div className={styles.btnRestart} onClick={() => handleRestartExam()} role="presentation">Restart</div>
+					</div>
+				</CustomModal>
 			</div>
 		</>
 	);

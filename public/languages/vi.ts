@@ -65,10 +65,10 @@ export default {
   },
   home: {
     banner: {
-      title: 'Hỗ trợ Hệ sinh thái các doanh nghiệp tạo tác động xã hội tại Việt Nam ứng phó với COVID-19',
-      desc: 'Tăng cường khả năng phục hồi của các doanh nghiệp có tác động xã hội (SIB) tại Việt Nam và góp phần giảm tác động của COVID-19 đối với các nhóm dễ bị tổn thương, đặc biệt là phụ nữ và trẻ em...',
+      title: 'Luyện thi TOEIC thoải mái mọi lúc mọi nơi với ứng dụng di động',
+      desc: 'Trang web TOEIC miễn phí cung cấp cho người học các bài luyện tập theo từng part, đề thi thử cũng như các bài tập về từ vựng và ngữ pháp. Bắt đầu hành trình chinh phục chứng chỉ TOEIC với các bài luyện tập trên trang web/ứng dụng của chúng tôi ngay hôm nay...',
       moreInformation: 'Tìm hiểu thêm',
-      register: 'ĐĂNG KÝ THAM GIA NGAY',
+      register: 'THI THỬ NGAY',
     },
     supportInformation: 'THÔNG TIN HỖ TRỢ',
     supportProgram: 'Chương trình hỗ trợ',

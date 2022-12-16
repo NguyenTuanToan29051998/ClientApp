@@ -14,4 +14,5 @@ export type QuestionPartOneType = {
   image: string,
   answer: string[],
   rightAnswer: number,
+  selectedAnswer?: number,
 }

@@ -54,12 +54,30 @@ const FullTestDetailBody: NextPage<PropType> = (props) => {
 						<div className={styles.questionPaletteBody}>
 							<div className={styles.questionsList}>
 								<div className={styles.questionsListRow}>
-									<div className={`${styles.questionItem}`}>1</div>
+									<div className={`${styles.questionItem} ${styles.incorrect}`}>1</div>
 									<div className={`${styles.questionItem}`}>2</div>
-									<div className={`${styles.questionItem}`}>3</div>
+									<div className={`${styles.questionItem} ${styles.incorrect}`}>3</div>
 									<div className={styles.questionItem}>4</div>
 									<div className={styles.questionItem}>5</div>
 									<div className={styles.questionItem}>6</div>
+									<div className={`${styles.questionItem}`}>7</div>
+									<div className={`${styles.questionItem}`}>8</div>
+									<div className={`${styles.questionItem}`}>9</div>
+									<div className={styles.questionItem}>10</div>
+									<div className={styles.questionItem}>11</div>
+									<div className={styles.questionItem}>12</div>
+									<div className={`${styles.questionItem}`}>13</div>
+									<div className={`${styles.questionItem}`}>14</div>
+									<div className={`${styles.questionItem}`}>15</div>
+									<div className={styles.questionItem}>16</div>
+									<div className={styles.questionItem}>17</div>
+									<div className={styles.questionItem}>18</div>
+									<div className={`${styles.questionItem}`}>19</div>
+									<div className={`${styles.questionItem}`}>20</div>
+									<div className={`${styles.questionItem}`}>21</div>
+									<div className={styles.questionItem}>22</div>
+									<div className={styles.questionItem}>23</div>
+									<div className={styles.questionItem}>24</div>
 								</div>
 							</div>
 						</div>

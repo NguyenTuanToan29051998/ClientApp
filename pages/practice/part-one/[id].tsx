@@ -20,8 +20,43 @@ const PartTwoDetail: NextPageWithLayout = (props: any) => {
 			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
 			image: 'string',
 			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
+			rightAnswer: 2,
+		},
+		{
+			id: 2,
+			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
+			image: 'string',
+			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
 			rightAnswer: 1,
-		}
+		},
+		{
+			id: 3,
+			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
+			image: 'string',
+			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
+			rightAnswer: 3,
+		},
+		{
+			id: 4,
+			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
+			image: 'string',
+			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
+			rightAnswer: 2,
+		},
+		{
+			id: 5,
+			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
+			image: 'string',
+			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
+			rightAnswer: 1,
+		},
+		{
+			id: 6,
+			mp3Link: 'https://www.anhngumshoa.com/uploads/sound/dificult_1/difficult_13.mp3',
+			image: 'string',
+			answer: ['The woman is cooking some bacon.', 'The woman is baking a cake.', 'The woman is preparing for dinner.', 'The woman is frying some fish.'],
+			rightAnswer: 0,
+		},
 	]);
 	const [loading, setLoading] = useState<boolean>(true);
 

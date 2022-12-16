@@ -1,13 +1,5 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
-import {
-  informationIcon1,
-  informationIcon2,
-  informationIcon3,
-  informationIcon4,
-  informationIcon5,
-  informationIcon6,
-  informationIcon7
-} from "../icons";
+
 
 export default {
   lang: 'Tiếng Việt',
@@ -131,47 +123,7 @@ export default {
         }
       ],
     },
-    infomationSection: {
-      SIBValues: [
-        {
-          title: 'Gói hỗ trợ SIB',
-          icon: informationIcon1,
-          href: '/support/sibSupportPackage',
-        },
-        {
-          title: 'Đào tạo và huấn luyện tổng quát',
-          icon: informationIcon2,
-          href: '/support/generalTraining&Coaching',
-        },
-        {
-          title: 'Kết nối doanh nghiệp',
-          icon: informationIcon3,
-          href: '/support/enterpriseConnection',
-        },
-        {
-          title: 'Mở rộng thị trường',
-          icon: informationIcon4,
-          href: '/support/marketExpansion',
-        },
-      ],
-      policyMakerValues: [
-        {
-          title: 'Nâng cao năng lực',
-          icon: informationIcon5,
-          href: '/policyMaker/support/capacityBuilding',
-        },
-        {
-          title: 'Xây dựng chính sách',
-          icon: informationIcon6,
-          href: '/policyMaker/support/policyDevelopment',
-        },
-        {
-          title: 'Thí điểm chính sách',
-          icon: informationIcon7,
-          href: '/policyMaker/support/policyPilot',
-        },
-      ],
-    },
+
     registerMember: {
       programs: {
         title: 'Đăng ký làm thành viên của SIB Hub',

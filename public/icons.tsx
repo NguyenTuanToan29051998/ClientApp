@@ -10,6 +10,12 @@ const angleRightIcon = (
   </svg>
 );
 
+const angleRightWhiteIcon = (
+  <svg width="5" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="biểu tượng mũi tên phải">
+    <path d="M1.40039 10.8L6.20039 6.00001L1.40039 1.20001" stroke="white" strokeLinecap="square" strokeWidth="2" />
+  </svg>
+);
+
 const angleLeftIcon = (
   <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="biểu tượng mũi tên trái">
     <path d="M6.39961 1.39999L1.59961 6.19999L6.39961 11" stroke="#1D1929" strokeLinecap="square" />
@@ -148,6 +154,7 @@ const clockIcon = (
 export {
   arrowLeftIcon,
   angleRightIcon,
+  angleRightWhiteIcon,
   angleLeftIcon,
   facebookGrayIcon,
   linkSimpleIcon,

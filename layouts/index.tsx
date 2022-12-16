@@ -16,7 +16,7 @@ type PropsType = {
 const Layout: FC<PropsType> = ({ children }) => {
   const [menus, setMenus] = useState<Menu[] | null>(null);
   const [userType, setUserType] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -25,14 +25,14 @@ const Layout: FC<PropsType> = ({ children }) => {
     const user = localStorage.getItem('type-user') || '';
     setUserType(user);
     setMenus(navSIB);
-    axios.all([
-      menuApiManagement.getMenuList(Number(user)),
-    ])
-      .then(axios.spread((menuRes, footerRes) => {
-        setMenus(menuRes.data);
-        setLoading(false);
-      }))
-      .catch((err) => setLoading(false));
+    // axios.all([
+    //   menuApiManagement.getMenuList(Number(user)),
+    // ])
+    //   .then(axios.spread((menuRes, footerRes) => {
+    //     setMenus(menuRes.data);
+    //     setLoading(false);
+    //   }))
+    //   .catch((err) => setLoading(false));
   }, [userType]);
 
   return (

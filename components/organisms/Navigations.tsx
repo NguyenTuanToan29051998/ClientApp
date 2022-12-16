@@ -94,9 +94,9 @@ const Navigations: FC<PropsType> = (props) => {
                 <div>
                 <a className={handleSelectedNav(nav.menuUrl) && styles.selected || ''} href="replace" onMouseEnter={() => handleHoverMenu(nav.menuName)}>{language.includes("vi") ? nav.menuName : nav.englishName}</a>
                 <div className={styles.selectMenu} onMouseLeave={() => setSubMenu('')}>
-                  {(subMenu === nav.menuName && nav.subMenus.length !== 0) && (
+                  {(subMenu === nav.menuName && nav.subMenus?.length !== 0) && (
                     <div className="d-flex flex-column mt-3">
-                      {nav.subMenus.map(subMenus => {
+                      {nav.subMenus?.map(subMenus => {
                         return (
                           <p className={styles.subMenu} key={Math.random()} onClick={(e) => handleSubmenu(subMenus.url, e)} role="presentation">{subMenus.name}</p>
                         );

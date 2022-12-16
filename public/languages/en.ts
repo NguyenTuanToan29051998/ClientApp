@@ -1,13 +1,5 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
-import {
-  informationIcon1,
-  informationIcon2,
-  informationIcon3,
-  informationIcon4,
-  informationIcon5,
-  informationIcon6,
-  informationIcon7
-} from "../icons";
+
 
 export default {
   lang: 'English',
@@ -131,47 +123,7 @@ export default {
         }
       ],
     },
-    infomationSection: {
-      SIBValues: [
-        {
-          title: 'SIB Support Package',
-          icon: informationIcon1,
-          href: '/support/sibSupportPackage',
-        },
-        {
-          title: 'General training and coaching',
-          icon: informationIcon2,
-          href: '/support/generalTraining&Coaching',
-        },
-        {
-          title: 'Business connection',
-          icon: informationIcon3,
-          href: '/support/enterpriseConnection',
-        },
-        {
-          title: 'Market expansion',
-          icon: informationIcon4,
-          href: '/support/marketExpansion',
-        },
-      ],
-      policyMakerValues: [
-        {
-          title: 'Capacity building',
-          icon: informationIcon5,
-          href: '/policyMaker/support/capacityBuilding',
-        },
-        {
-          title: 'Policy development',
-          icon: informationIcon6,
-          href: '/policyMaker/support/policyDevelopment',
-        },
-        {
-          title: 'Policy pilot',
-          icon: informationIcon7,
-          href: '/policyMaker/support/policyPilot',
-        },
-      ],
-    },
+
     registerMember: {
       programs: {
         title: 'Register as a member of SIB Hub',

@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import useTrans from '../../hooks/useTrans';
-import { angleRightIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon } from '../../public/icons';
+import { angleRightIcon, angleRightWhiteIcon, answerSelectIcon, correctResultIcon, incorrectResultIcon, restartIcon } from '../../public/icons';
 import styles from '../../styles/components/templates/PartOneDetailBody.module.scss';
 import SubTopic from '../organisms/SubTopic';
 
@@ -18,14 +18,7 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 	const { id } = router.query;
 	const [currentQuestion, setCurrentQuestion] = useState(questionList.find((question: QuestionPartOneType) => question.id === +(id as string)));
 	const [isShowExplanation, setIsShowExplanation] = useState<boolean>(true);
-	const [numberSelectedAnswer, setNumberSelectedAnswer] = useState<number | null>(null);
-	const [isReadLess, setIsReadLess] = useState<boolean>(false);
-	const [idSeeMore, setIdSeeMore] = useState<number | null>(null);
-
-	const handleSeeMore = (isSeeMore: boolean, idPost: number) => {
-		setIsReadLess(isSeeMore);
-		setIdSeeMore(idPost);
-	};
+	const [numberSelectedAnswer, setNumberSelectedAnswer] = useState<number>(-1);
 
 	const handleShowExplanationElement = () => {
 		const handleAnswerElement = (answer: string, index: number) => {
@@ -58,22 +51,20 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 	};
 
 	const handleResultIcon = (index: number) => {
-		if (!numberSelectedAnswer) return <div>{answerSelectIcon}</div>;
-		console.log(numberSelectedAnswer, index, 'number');
-		// if (currentQuestion?.rightAnswer === numberSelectedAnswer && index === currentQuestion?.rightAnswer) {
-		// 	return <div>{correctResultIcon}</div>;
-		// } else if (index === currentQuestion?.rightAnswer ) {
-		// 	return <div>{incorrectResultIcon}</div>;
-		// } else return <div>{answerSelectIcon}</div>;
-		if (numberSelectedAnswer === index) {
-			if (index === currentQuestion?.rightAnswer) {
-				return <div>{correctResultIcon}</div>;
-			} else {
-				return <div>{incorrectResultIcon}</div>;
-			}
+		if (numberSelectedAnswer === -1) {
+			return <div>{answerSelectIcon}</div>;
+		} else if ((numberSelectedAnswer === currentQuestion?.rightAnswer && numberSelectedAnswer === index) || currentQuestion?.rightAnswer === index) {
+			return <div>{correctResultIcon}</div>;
+		} else if (numberSelectedAnswer === index) {
+			return <div>{incorrectResultIcon}</div>;
 		} else {
 			return <div>{answerSelectIcon}</div>;
 		}
+	};
+
+	const handleSelectedAnswer = (index: number) => {
+		if (numberSelectedAnswer !== -1) return;
+		setNumberSelectedAnswer(index);
 	};
 
 	return (
@@ -87,12 +78,14 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 						<div className={styles.questionPaletteBody}>
 							<div className={styles.questionsList}>
 								<div className={styles.questionsListRow}>
-									<div className={`${styles.questionItem} ${styles.correct}`}>1</div>
+									{/* <div className={`${styles.questionItem} ${styles.correct}`}>1</div>
 									<div className={`${styles.questionItem} ${styles.incorrect}`}>2</div>
-									<div className={`${styles.questionItem} ${styles.itemCurrent}`}>3</div>
-									<div className={styles.questionItem}>4</div>
-									<div className={styles.questionItem}>5</div>
-									<div className={styles.questionItem}>6</div>
+									<div className={`${styles.questionItem} ${styles.itemCurrent}`}>3</div> */}
+									{questionList.map((item, index) => {
+										return (
+											<div className={styles.questionItem} key={item.id}>{index + 1}</div>
+										);
+									})}
 								</div>
 							</div>
 							<div className={styles.questionsStat}>
@@ -177,35 +170,39 @@ const PartOneDetailBody: NextPage<PropType> = (props) => {
 						</div>
 						<div className={styles.questionImage}></div>
 						<div className={styles.quizChoices}>
-							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(0)} role="presentation">
+							<div className={styles.quizChoicesItem} onClick={() => handleSelectedAnswer(0)} role="presentation">
 								{handleResultIcon(0)}
-								<div className={styles.quizChoicesItemContent}>(A)</div>
+								<div className={`${styles.quizChoicesItemContent} ${numberSelectedAnswer === 0 && numberSelectedAnswer !== currentQuestion?.rightAnswer ? styles.incorrect : ''}`}>(A)</div>
 							</div>
-							{currentQuestion?.rightAnswer === 0 && numberSelectedAnswer && (
+							{currentQuestion?.rightAnswer === 0 && numberSelectedAnswer !== -1 && (
 								handleShowExplanationElement()
 							)}
-							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(1)} role="presentation">
+							<div className={styles.quizChoicesItem} onClick={() => handleSelectedAnswer(1)} role="presentation">
 								{handleResultIcon(1)}
-								<div className={styles.quizChoicesItemContent}>(B)</div>
+								<div className={`${styles.quizChoicesItemContent} ${numberSelectedAnswer === 1 && numberSelectedAnswer !== currentQuestion?.rightAnswer ? styles.incorrect : ''}`}>(B)</div>
 							</div>
-							{currentQuestion?.rightAnswer === 1 && numberSelectedAnswer && (
+							{currentQuestion?.rightAnswer === 1 && numberSelectedAnswer !== -1 && (
 								handleShowExplanationElement()
 							)}
-							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(2)} role="presentation">
+							<div className={styles.quizChoicesItem} onClick={() => handleSelectedAnswer(2)} role="presentation">
 								{handleResultIcon(2)}
-								<div className={styles.quizChoicesItemContent}>(C)</div>
+								<div className={`${styles.quizChoicesItemContent} ${numberSelectedAnswer === 2 && numberSelectedAnswer !== currentQuestion?.rightAnswer ? styles.incorrect : ''}`}>(C)</div>
 							</div>
-							{currentQuestion?.rightAnswer === 2 && numberSelectedAnswer && (
+							{currentQuestion?.rightAnswer === 2 && numberSelectedAnswer !== -1 && (
 								handleShowExplanationElement()
 							)}
-							<div className={styles.quizChoicesItem} onClick={() => setNumberSelectedAnswer(3)} role="presentation">
+							<div className={styles.quizChoicesItem} onClick={() => handleSelectedAnswer(3)} role="presentation">
 								{handleResultIcon(3)}
-								<div className={styles.quizChoicesItemContent}>(D)</div>
+								<div className={`${styles.quizChoicesItemContent} ${numberSelectedAnswer === 3 && numberSelectedAnswer !== currentQuestion?.rightAnswer ? styles.incorrect : ''}`}>(D)</div>
 							</div>
-							{currentQuestion?.rightAnswer === 3 && numberSelectedAnswer && (
+							{currentQuestion?.rightAnswer === 3 && numberSelectedAnswer !== -1 && (
 								handleShowExplanationElement()
 							)}
 						</div>
+					</div>
+					<div className={styles.btnNext}>
+						<div className={styles.text}>Next</div>
+						<div className="d-flex">{angleRightWhiteIcon}</div>
 					</div>
 				</div>
 			</div>
